@@ -114,7 +114,8 @@ namespace QuanLyLichDangKiKhamBenh
             //        if (newPassword == confirmPassword)
             //        {
 
-            //            if (MessageBox.Show("Thay đổi mật khẩu thành công. Bạn có muốn đăng nhập không ?", "Thông báo",
+            //            if (MessageBox.Show("Thay đổi mật khẩu thành công. Bạn có muốn đăng nhập không ?",
+            //            "Thông báo",
             //        MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes) ;
             //            {
             //                this.Close();
@@ -143,7 +144,7 @@ namespace QuanLyLichDangKiKhamBenh
         private void button2_Click(object sender, EventArgs e)
         {
             DangNhapForm dangNhapForm= new DangNhapForm();
-            dangNhapForm.ShowDialog();
+            dangNhapForm.Show();
 
             this.Hide();
         }

@@ -50,5 +50,64 @@ namespace QuanLyLichDangKiKhamBenh
             }
         }
 
+        public List<Patients> AddPatients(string query)
+        {
+            List<Patients> patients = new List<Patients>();
+
+            //
+
+            using (SqlConnection sqlConnection = Connection.GetSqlConnection())
+            {
+                sqlConnection.Open();
+                // khai bao phuong thuc ket noi
+                sqlCommand = new SqlCommand(query, sqlConnection);
+                dataReader = sqlCommand.ExecuteReader();
+                while (dataReader.Read())
+                {
+                    patients.Add(new Patients(
+                        dataReader.GetInt32(0),      // CCCD
+                        dataReader.GetString(1),     // Name
+                        dataReader.GetString(2),     // Gender
+                        dataReader.GetDateTime(3),   // DayOfBirth
+                        dataReader.GetInt32(4),      // Contact
+                        dataReader.GetInt32(5),      // Age
+                        dataReader.GetString(6),     // BloodGroup
+                        dataReader.GetString(8),     // History
+                        dataReader.GetString(7)      // Address
+                        ));
+                }
+
+
+                sqlConnection.Close();
+            }
+            return patients;
+        }
+
+        /// them benh nhan
+        public void AddPatients(Patients patient)
+        {
+            using (SqlConnection sqlConnection = Connection.GetSqlConnection())
+            {
+                sqlConnection.Open();
+
+                string query = "INSERT INTO Patients VALUES (@CCCD, @name, @gender, @Year, @contact, @blood, @history, @address)";
+
+                using (SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
+                {
+                    sqlCommand.Parameters.AddWithValue("@CCCD", patient.CCCD);
+                    sqlCommand.Parameters.AddWithValue("@name", patient.Name);
+                    sqlCommand.Parameters.AddWithValue("@gender", patient.Gender);
+                    sqlCommand.Parameters.AddWithValue("@Year", patient.DayOfBirth);
+                    sqlCommand.Parameters.AddWithValue("@contact", patient.Contact);
+                    sqlCommand.Parameters.AddWithValue("@blood", patient.BloodGroup);
+                    sqlCommand.Parameters.AddWithValue("@history", patient.History);
+                    sqlCommand.Parameters.AddWithValue("@address", patient.Address);
+
+                    sqlCommand.ExecuteNonQuery();
+                }
+
+                sqlConnection.Close();
+            }
+        }
     }
 }

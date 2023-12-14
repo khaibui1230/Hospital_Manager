@@ -26,6 +26,8 @@
         {
 
         }
+        
+
 
         Modiffy modiffy = new Modiffy();
         private void DangnhapBtn_Click(object sender, EventArgs e)

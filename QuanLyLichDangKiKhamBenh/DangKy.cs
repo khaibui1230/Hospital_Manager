@@ -84,7 +84,7 @@ namespace QuanLyLichDangKiKhamBenh
                 {
                     this.Close();
                     DangNhapForm dangNhapForm = new DangNhapForm();
-                    dangNhapForm.ShowDialog();
+                    dangNhapForm.Show();
 
                     this.Hide();
                 }
@@ -92,6 +92,14 @@ namespace QuanLyLichDangKiKhamBenh
             }catch {
                 MessageBox.Show(" Tên Tài khoản đã được đăng kí, Vui lòng nhập tên tài khoản khác, hoặc đăng nhập");
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DangNhapForm dangNhapForm = new DangNhapForm();
+            dangNhapForm.Show();
+
+            this.Hide();
         }
     }
 }

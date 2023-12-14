@@ -38,6 +38,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox_Email = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,9 +46,9 @@
             // 
             this.Button_DangKi.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Button_DangKi.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Button_DangKi.Location = new System.Drawing.Point(261, 422);
+            this.Button_DangKi.Location = new System.Drawing.Point(389, 442);
             this.Button_DangKi.Name = "Button_DangKi";
-            this.Button_DangKi.Size = new System.Drawing.Size(171, 55);
+            this.Button_DangKi.Size = new System.Drawing.Size(130, 37);
             this.Button_DangKi.TabIndex = 26;
             this.Button_DangKi.Text = "Đăng kí";
             this.Button_DangKi.UseVisualStyleBackColor = false;
@@ -142,11 +143,24 @@
             this.textBox_Email.Size = new System.Drawing.Size(258, 33);
             this.textBox_Email.TabIndex = 27;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button1.Location = new System.Drawing.Point(38, 442);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(89, 37);
+            this.button1.TabIndex = 29;
+            this.button1.Text = "Thoát";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // DangKyForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(604, 588);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox_Email);
             this.Controls.Add(this.Button_DangKi);
@@ -177,5 +191,6 @@
         private PictureBox pictureBox1;
         private Label label4;
         private TextBox textBox_Email;
+        private Button button1;
     }
 }
