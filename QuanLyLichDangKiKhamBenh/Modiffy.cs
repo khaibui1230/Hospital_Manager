@@ -109,5 +109,51 @@ namespace QuanLyLichDangKiKhamBenh
                 sqlConnection.Close();
             }
         }
+        public void UpdatePatient(Patients patient)
+        {
+            using (SqlConnection sqlConnection = Connection.GetSqlConnection())
+            {
+                sqlConnection.Open();
+
+                //string query = "UPDATE Patients SET Name = @name, Gender = @gender, DayOfBirth = @Year, Contact = @contact, BloodGroup = @blood, History = @history, Address = @address WHERE PatientID = @CCCD";
+                string query = "UPDATE Patients SET FullName = @name, Gender = @gender, DateOfBirth = @Year, PhoneNumber = @contact, Blood_Group = @blood, Medical_History = @history, Address = @address WHERE PatientID = @CCCD";
+
+                using (SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
+                {
+                    sqlCommand.Parameters.AddWithValue("@CCCD", patient.CCCD);
+                    sqlCommand.Parameters.AddWithValue("@name", patient.Name);
+                    sqlCommand.Parameters.AddWithValue("@gender", patient.Gender);
+                    sqlCommand.Parameters.AddWithValue("@Year", patient.DayOfBirth);
+                    sqlCommand.Parameters.AddWithValue("@contact", patient.Contact);
+                    sqlCommand.Parameters.AddWithValue("@blood", patient.BloodGroup);
+                    sqlCommand.Parameters.AddWithValue("@history", patient.History);
+                    sqlCommand.Parameters.AddWithValue("@address", patient.Address);
+
+                    sqlCommand.ExecuteNonQuery();
+                }
+
+                sqlConnection.Close();
+            }
+        }
+        public void DeletePatient(int cccd)
+        {
+            using (SqlConnection sqlConnection = Connection.GetSqlConnection())
+            {
+                sqlConnection.Open();
+
+                string query = "DELETE FROM Patients WHERE PatientID = @CCCD";
+
+                using (SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
+                {
+                    sqlCommand.Parameters.AddWithValue("@CCCD", cccd);
+
+                    sqlCommand.ExecuteNonQuery();
+                }
+
+                sqlConnection.Close();
+            }
+        }
+
+
     }
 }

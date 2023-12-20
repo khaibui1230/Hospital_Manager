@@ -15,14 +15,13 @@
 
         
 
-        private DataGridView dataGridView1;
+        private DataGridView dataGridViewAdd;
         private Label C;
         private Button Button_ThemBenhNhan;
         private Button Button_ChanDoanBenh;
         private Button button_DSachBenhNhan;
         private Button button_Thoat;
-        private PictureBox pictureBox1;
-        private Panel panel1;
+        private Panel panel_thembenhnhan;
         private Button button_Save;
         private TextBox textBox_CCCD;
         private Label label8;
@@ -58,9 +57,15 @@
         private Label label15;
         private Button button_Luu;
         private Panel panel2;
-        private DataGridView dataGridView_Full;
         private Button button1;
-        private Panel panel_DS;
         private TextBox textBox_Year;
+        private DataGridView dataGridView_Full;
+        private Panel panel_DS;
+        private BindingSource taiKhoanBindingSource;
+        private Button button_xoa;
+        private Button Button_Sua;
+        private Label label17;
+        private Button button3;
+        private Button button2;
     }
 }

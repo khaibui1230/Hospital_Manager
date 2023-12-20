@@ -40,17 +40,29 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "dependencies": {
+            "Bunifu.Utils": {
+              "target": "Package",
+              "version": "[1.0.5, )"
+            },
             "EPPlus": {
               "target": "Package",
-              "version": "[7.0.3, )"
+              "version": "[7.0.4, )"
             },
             "Microsoft.Data.SqlClient": {
               "target": "Package",
-              "version": "[5.2.0-preview3.23201.1, )"
+              "version": "[5.2.0-preview4.23342.2, )"
+            },
+            "Microsoft.Office.Interop.Excel": {
+              "target": "Package",
+              "version": "[15.0.4795.1001, )"
             },
             "System.Data.SqlClient": {
               "target": "Package",
               "version": "[4.8.5, )"
+            },
+            "iTextSharp": {
+              "target": "Package",
+              "version": "[5.5.13.3, )"
             }
           },
           "imports": [

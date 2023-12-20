@@ -49,11 +49,16 @@
                 {
                     MessageBox.Show("Dang nhap thanh cong");
                     // vao trang chu khi dang nhap thanh cong
+                    try
+                    {
+                        Home home = new Home();
+                        home.Show();
 
-                    Home home = new Home();
-                    home.ShowDialog();
-
-                    this.Hide();
+                        this.Hide();
+                    }catch(Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);    
+                    }
                 }
                 else
                 {

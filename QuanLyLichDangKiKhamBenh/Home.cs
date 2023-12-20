@@ -14,6 +14,9 @@ using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using OfficeOpenXml;
+using Excel = Microsoft.Office.Interop.Excel;
+using Bunifu.Framework.UI;
+
 namespace QuanLyLichDangKiKhamBenh
 {
     public partial class Home : Form
@@ -31,32 +34,22 @@ namespace QuanLyLichDangKiKhamBenh
 
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
+            this.components = new System.ComponentModel.Container();
             this.C = new System.Windows.Forms.Label();
             this.Button_ThemBenhNhan = new System.Windows.Forms.Button();
             this.Button_ChanDoanBenh = new System.Windows.Forms.Button();
             this.button_DSachBenhNhan = new System.Windows.Forms.Button();
             this.button_Thoat = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox_Year = new System.Windows.Forms.TextBox();
-            this.panel_ChandoanBenh = new System.Windows.Forms.Panel();
+            this.panel_thembenhnhan = new System.Windows.Forms.Panel();
             this.panel_DS = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label17 = new System.Windows.Forms.Label();
             this.dataGridView_Full = new System.Windows.Forms.DataGridView();
-            this.button_Luu = new System.Windows.Forms.Button();
-            this.comboBox_KhoaKhambenh = new System.Windows.Forms.ComboBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.comboBox_CanGiamSAt = new System.Windows.Forms.ComboBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.button_keDonThuoc = new System.Windows.Forms.Button();
-            this.textBox_Chandoan = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.textBox_TrieuChung = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.dataGridView_PatientMore = new System.Windows.Forms.DataGridView();
-            this.textBox_Id2 = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.button_xoa = new System.Windows.Forms.Button();
+            this.Button_Sua = new System.Windows.Forms.Button();
+            this.dataGridViewAdd = new System.Windows.Forms.DataGridView();
+            this.textBox_Year = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.comboBox_NhomMau = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -76,20 +69,37 @@ namespace QuanLyLichDangKiKhamBenh
             this.label2 = new System.Windows.Forms.Label();
             this.textBox_Name = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel_ChandoanBenh = new System.Windows.Forms.Panel();
+            this.button_Luu = new System.Windows.Forms.Button();
+            this.comboBox_KhoaKhambenh = new System.Windows.Forms.ComboBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.comboBox_CanGiamSAt = new System.Windows.Forms.ComboBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.button_keDonThuoc = new System.Windows.Forms.Button();
+            this.textBox_Chandoan = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.textBox_TrieuChung = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.dataGridView_PatientMore = new System.Windows.Forms.DataGridView();
+            this.textBox_Id2 = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.panel_ChandoanBenh.SuspendLayout();
+            this.taiKhoanBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.panel_thembenhnhan.SuspendLayout();
             this.panel_DS.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Full)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAdd)).BeginInit();
+            this.panel_ChandoanBenh.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_PatientMore)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.taiKhoanBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // C
             // 
             this.C.AutoSize = true;
             this.C.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.C.Location = new System.Drawing.Point(85, 49);
+            this.C.Location = new System.Drawing.Point(30, 46);
             this.C.Name = "C";
             this.C.Size = new System.Drawing.Size(132, 31);
             this.C.TabIndex = 0;
@@ -99,7 +109,7 @@ namespace QuanLyLichDangKiKhamBenh
             // 
             this.Button_ThemBenhNhan.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.Button_ThemBenhNhan.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Button_ThemBenhNhan.Location = new System.Drawing.Point(44, 116);
+            this.Button_ThemBenhNhan.Location = new System.Drawing.Point(12, 102);
             this.Button_ThemBenhNhan.Name = "Button_ThemBenhNhan";
             this.Button_ThemBenhNhan.Size = new System.Drawing.Size(215, 49);
             this.Button_ThemBenhNhan.TabIndex = 1;
@@ -111,7 +121,7 @@ namespace QuanLyLichDangKiKhamBenh
             // 
             this.Button_ChanDoanBenh.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.Button_ChanDoanBenh.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Button_ChanDoanBenh.Location = new System.Drawing.Point(44, 197);
+            this.Button_ChanDoanBenh.Location = new System.Drawing.Point(12, 178);
             this.Button_ChanDoanBenh.Name = "Button_ChanDoanBenh";
             this.Button_ChanDoanBenh.Size = new System.Drawing.Size(215, 49);
             this.Button_ChanDoanBenh.TabIndex = 2;
@@ -123,7 +133,7 @@ namespace QuanLyLichDangKiKhamBenh
             // 
             this.button_DSachBenhNhan.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.button_DSachBenhNhan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button_DSachBenhNhan.Location = new System.Drawing.Point(44, 278);
+            this.button_DSachBenhNhan.Location = new System.Drawing.Point(12, 265);
             this.button_DSachBenhNhan.Name = "button_DSachBenhNhan";
             this.button_DSachBenhNhan.Size = new System.Drawing.Size(215, 49);
             this.button_DSachBenhNhan.TabIndex = 3;
@@ -135,7 +145,7 @@ namespace QuanLyLichDangKiKhamBenh
             // 
             this.button_Thoat.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button_Thoat.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button_Thoat.Location = new System.Drawing.Point(69, 458);
+            this.button_Thoat.Location = new System.Drawing.Point(50, 421);
             this.button_Thoat.Name = "button_Thoat";
             this.button_Thoat.Size = new System.Drawing.Size(112, 50);
             this.button_Thoat.TabIndex = 4;
@@ -143,50 +153,327 @@ namespace QuanLyLichDangKiKhamBenh
             this.button_Thoat.UseVisualStyleBackColor = false;
             this.button_Thoat.Click += new System.EventHandler(this.button_Thoat_Click);
             // 
-            // pictureBox1
+            // panel_thembenhnhan
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(287, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(940, 630);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
+            this.panel_thembenhnhan.Controls.Add(this.panel_DS);
+            this.panel_thembenhnhan.Controls.Add(this.button_xoa);
+            this.panel_thembenhnhan.Controls.Add(this.Button_Sua);
+            this.panel_thembenhnhan.Controls.Add(this.dataGridViewAdd);
+            this.panel_thembenhnhan.Controls.Add(this.textBox_Year);
+            this.panel_thembenhnhan.Controls.Add(this.label10);
+            this.panel_thembenhnhan.Controls.Add(this.comboBox_NhomMau);
+            this.panel_thembenhnhan.Controls.Add(this.comboBox1);
+            this.panel_thembenhnhan.Controls.Add(this.label9);
+            this.panel_thembenhnhan.Controls.Add(this.button_Save);
+            this.panel_thembenhnhan.Controls.Add(this.textBox_CCCD);
+            this.panel_thembenhnhan.Controls.Add(this.label8);
+            this.panel_thembenhnhan.Controls.Add(this.textBox_TienSuBenh);
+            this.panel_thembenhnhan.Controls.Add(this.label7);
+            this.panel_thembenhnhan.Controls.Add(this.label6);
+            this.panel_thembenhnhan.Controls.Add(this.label5);
+            this.panel_thembenhnhan.Controls.Add(this.textBox_Age);
+            this.panel_thembenhnhan.Controls.Add(this.label4);
+            this.panel_thembenhnhan.Controls.Add(this.textBox_Number);
+            this.panel_thembenhnhan.Controls.Add(this.label3);
+            this.panel_thembenhnhan.Controls.Add(this.textBox_Address);
+            this.panel_thembenhnhan.Controls.Add(this.label2);
+            this.panel_thembenhnhan.Controls.Add(this.textBox_Name);
+            this.panel_thembenhnhan.Controls.Add(this.label1);
+            this.panel_thembenhnhan.Location = new System.Drawing.Point(255, 12);
+            this.panel_thembenhnhan.Name = "panel_thembenhnhan";
+            this.panel_thembenhnhan.Size = new System.Drawing.Size(1170, 630);
+            this.panel_thembenhnhan.TabIndex = 6;
+            this.panel_thembenhnhan.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // panel1
+            // panel_DS
             // 
-            this.panel1.Controls.Add(this.textBox_Year);
-            this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.comboBox_NhomMau);
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.button_Save);
-            this.panel1.Controls.Add(this.textBox_CCCD);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.textBox_TienSuBenh);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.textBox_Age);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.textBox_Number);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.textBox_Address);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.textBox_Name);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(287, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(943, 630);
-            this.panel1.TabIndex = 6;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panel_DS.Controls.Add(this.button3);
+            this.panel_DS.Controls.Add(this.button2);
+            this.panel_DS.Controls.Add(this.label17);
+            this.panel_DS.Controls.Add(this.dataGridView_Full);
+            this.panel_DS.Location = new System.Drawing.Point(132, 452);
+            this.panel_DS.Name = "panel_DS";
+            this.panel_DS.Size = new System.Drawing.Size(1190, 635);
+            this.panel_DS.TabIndex = 23;
+            this.panel_DS.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint_1);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button3.Location = new System.Drawing.Point(985, 537);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(145, 44);
+            this.button3.TabIndex = 3;
+            this.button3.Text = "Xóa Thông tin";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button2.Location = new System.Drawing.Point(744, 537);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(145, 44);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Sửa Thông Tin";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Perpetua Titling MT", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label17.Location = new System.Drawing.Point(422, 14);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(328, 28);
+            this.label17.TabIndex = 1;
+            this.label17.Text = "Danh Sách bệnh Nhân";
+            // 
+            // dataGridView_Full
+            // 
+            this.dataGridView_Full.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_Full.Location = new System.Drawing.Point(15, 48);
+            this.dataGridView_Full.Name = "dataGridView_Full";
+            this.dataGridView_Full.RowHeadersWidth = 51;
+            this.dataGridView_Full.RowTemplate.Height = 29;
+            this.dataGridView_Full.Size = new System.Drawing.Size(1159, 456);
+            this.dataGridView_Full.TabIndex = 0;
+            this.dataGridView_Full.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Full_CellContentClick);
+            this.dataGridView_Full.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Full_CellContentClick_2);
+            // 
+            // button_xoa
+            // 
+            this.button_xoa.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button_xoa.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button_xoa.Location = new System.Drawing.Point(776, 305);
+            this.button_xoa.Name = "button_xoa";
+            this.button_xoa.Size = new System.Drawing.Size(112, 42);
+            this.button_xoa.TabIndex = 26;
+            this.button_xoa.Text = "Xóa";
+            this.button_xoa.UseVisualStyleBackColor = false;
+            this.button_xoa.Click += new System.EventHandler(this.button_xoa_Click);
+            // 
+            // Button_Sua
+            // 
+            this.Button_Sua.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Button_Sua.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Button_Sua.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Button_Sua.Location = new System.Drawing.Point(454, 305);
+            this.Button_Sua.Name = "Button_Sua";
+            this.Button_Sua.Size = new System.Drawing.Size(112, 42);
+            this.Button_Sua.TabIndex = 25;
+            this.Button_Sua.Text = "Sửa";
+            this.Button_Sua.UseVisualStyleBackColor = false;
+            this.Button_Sua.Click += new System.EventHandler(this.Button_Sua_Click);
+            // 
+            // dataGridViewAdd
+            // 
+            this.dataGridViewAdd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewAdd.Location = new System.Drawing.Point(13, 362);
+            this.dataGridViewAdd.Name = "dataGridViewAdd";
+            this.dataGridViewAdd.RowHeadersWidth = 51;
+            this.dataGridViewAdd.RowTemplate.Height = 29;
+            this.dataGridViewAdd.Size = new System.Drawing.Size(1157, 234);
+            this.dataGridViewAdd.TabIndex = 24;
+            this.dataGridViewAdd.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAdd_CellContentClick);
+            this.dataGridViewAdd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAdd_CellContentClick);
             // 
             // textBox_Year
             // 
-            this.textBox_Year.Location = new System.Drawing.Point(409, 295);
+            this.textBox_Year.Location = new System.Drawing.Point(946, 78);
             this.textBox_Year.Name = "textBox_Year";
             this.textBox_Year.Size = new System.Drawing.Size(125, 27);
             this.textBox_Year.TabIndex = 23;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label10.Location = new System.Drawing.Point(842, 77);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(92, 25);
+            this.label10.TabIndex = 20;
+            this.label10.Text = "Năm sinh";
+            // 
+            // comboBox_NhomMau
+            // 
+            this.comboBox_NhomMau.FormattingEnabled = true;
+            this.comboBox_NhomMau.Items.AddRange(new object[] {
+            "A",
+            "B",
+            "AB",
+            "O",
+            "A Rh+",
+            "A Rh-",
+            "B Rh+",
+            "B Rh-",
+            "AB Rh+",
+            "AB Rh-",
+            "O Rh+",
+            "O Rh-"});
+            this.comboBox_NhomMau.Location = new System.Drawing.Point(677, 195);
+            this.comboBox_NhomMau.Name = "comboBox_NhomMau";
+            this.comboBox_NhomMau.Size = new System.Drawing.Size(91, 28);
+            this.comboBox_NhomMau.TabIndex = 19;
+            this.comboBox_NhomMau.SelectedIndexChanged += new System.EventHandler(this.comboBox_NhomMau_SelectedIndexChanged);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ",
+            "Khác"});
+            this.comboBox1.Location = new System.Drawing.Point(961, 193);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(88, 28);
+            this.comboBox1.TabIndex = 18;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label9.Location = new System.Drawing.Point(352, 15);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(230, 25);
+            this.label9.TabIndex = 17;
+            this.label9.Text = "THÊM BỆNH NHÂN";
+            // 
+            // button_Save
+            // 
+            this.button_Save.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button_Save.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button_Save.Location = new System.Drawing.Point(202, 305);
+            this.button_Save.Name = "button_Save";
+            this.button_Save.Size = new System.Drawing.Size(112, 42);
+            this.button_Save.TabIndex = 16;
+            this.button_Save.Text = "Thêm";
+            this.button_Save.UseVisualStyleBackColor = false;
+            this.button_Save.Click += new System.EventHandler(this.button_Save_Click);
+            // 
+            // textBox_CCCD
+            // 
+            this.textBox_CCCD.Location = new System.Drawing.Point(147, 188);
+            this.textBox_CCCD.Name = "textBox_CCCD";
+            this.textBox_CCCD.Size = new System.Drawing.Size(307, 27);
+            this.textBox_CCCD.TabIndex = 15;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.Location = new System.Drawing.Point(34, 190);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(56, 25);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "CCCD";
+            // 
+            // textBox_TienSuBenh
+            // 
+            this.textBox_TienSuBenh.Location = new System.Drawing.Point(192, 244);
+            this.textBox_TienSuBenh.Name = "textBox_TienSuBenh";
+            this.textBox_TienSuBenh.Size = new System.Drawing.Size(869, 27);
+            this.textBox_TienSuBenh.TabIndex = 13;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label7.Location = new System.Drawing.Point(30, 243);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(122, 25);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Tiền sử bệnh";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.Location = new System.Drawing.Point(547, 192);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(106, 25);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Nhóm máu";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(845, 192);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(89, 25);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Giới Tính";
+            // 
+            // textBox_Age
+            // 
+            this.textBox_Age.Location = new System.Drawing.Point(490, 75);
+            this.textBox_Age.Name = "textBox_Age";
+            this.textBox_Age.Size = new System.Drawing.Size(133, 27);
+            this.textBox_Age.TabIndex = 7;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(425, 74);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(49, 25);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Tuổi";
+            // 
+            // textBox_Number
+            // 
+            this.textBox_Number.Location = new System.Drawing.Point(600, 138);
+            this.textBox_Number.Name = "textBox_Number";
+            this.textBox_Number.Size = new System.Drawing.Size(203, 27);
+            this.textBox_Number.TabIndex = 5;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(440, 138);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(124, 25);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Số điện thoại";
+            // 
+            // textBox_Address
+            // 
+            this.textBox_Address.Location = new System.Drawing.Point(149, 129);
+            this.textBox_Address.Name = "textBox_Address";
+            this.textBox_Address.Size = new System.Drawing.Size(270, 27);
+            this.textBox_Address.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(34, 128);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(72, 25);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Địa Chỉ";
+            // 
+            // textBox_Name
+            // 
+            this.textBox_Name.Location = new System.Drawing.Point(149, 78);
+            this.textBox_Name.Name = "textBox_Name";
+            this.textBox_Name.Size = new System.Drawing.Size(270, 27);
+            this.textBox_Name.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(34, 77);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(98, 25);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Họ Và Tên";
             // 
             // panel_ChandoanBenh
             // 
@@ -204,36 +491,17 @@ namespace QuanLyLichDangKiKhamBenh
             this.panel_ChandoanBenh.Controls.Add(this.textBox_Id2);
             this.panel_ChandoanBenh.Controls.Add(this.label12);
             this.panel_ChandoanBenh.Controls.Add(this.label11);
-            this.panel_ChandoanBenh.Location = new System.Drawing.Point(287, 12);
+            this.panel_ChandoanBenh.Location = new System.Drawing.Point(255, 12);
             this.panel_ChandoanBenh.Name = "panel_ChandoanBenh";
-            this.panel_ChandoanBenh.Size = new System.Drawing.Size(943, 638);
+            this.panel_ChandoanBenh.Size = new System.Drawing.Size(1167, 638);
             this.panel_ChandoanBenh.TabIndex = 22;
             this.panel_ChandoanBenh.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // panel_DS
-            // 
-            this.panel_DS.Controls.Add(this.dataGridView_Full);
-            this.panel_DS.Location = new System.Drawing.Point(287, 12);
-            this.panel_DS.Name = "panel_DS";
-            this.panel_DS.Size = new System.Drawing.Size(954, 635);
-            this.panel_DS.TabIndex = 23;
-            this.panel_DS.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint_1);
-            // 
-            // dataGridView_Full
-            // 
-            this.dataGridView_Full.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_Full.Location = new System.Drawing.Point(8, 10);
-            this.dataGridView_Full.Name = "dataGridView_Full";
-            this.dataGridView_Full.RowHeadersWidth = 51;
-            this.dataGridView_Full.RowTemplate.Height = 29;
-            this.dataGridView_Full.Size = new System.Drawing.Size(926, 631);
-            this.dataGridView_Full.TabIndex = 0;
             // 
             // button_Luu
             // 
             this.button_Luu.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button_Luu.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button_Luu.Location = new System.Drawing.Point(671, 541);
+            this.button_Luu.Location = new System.Drawing.Point(856, 552);
             this.button_Luu.Name = "button_Luu";
             this.button_Luu.Size = new System.Drawing.Size(111, 42);
             this.button_Luu.TabIndex = 13;
@@ -260,7 +528,7 @@ namespace QuanLyLichDangKiKhamBenh
             "Khoa Nhiễm ",
             "Khoa Răng Hàm Mặt ",
             "Khoa Mắt"});
-            this.comboBox_KhoaKhambenh.Location = new System.Drawing.Point(671, 474);
+            this.comboBox_KhoaKhambenh.Location = new System.Drawing.Point(841, 476);
             this.comboBox_KhoaKhambenh.Name = "comboBox_KhoaKhambenh";
             this.comboBox_KhoaKhambenh.Size = new System.Drawing.Size(260, 28);
             this.comboBox_KhoaKhambenh.TabIndex = 12;
@@ -269,7 +537,7 @@ namespace QuanLyLichDangKiKhamBenh
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label16.Location = new System.Drawing.Point(504, 471);
+            this.label16.Location = new System.Drawing.Point(661, 479);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(161, 25);
             this.label16.TabIndex = 11;
@@ -300,7 +568,7 @@ namespace QuanLyLichDangKiKhamBenh
             // button_keDonThuoc
             // 
             this.button_keDonThuoc.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.button_keDonThuoc.Location = new System.Drawing.Point(52, 536);
+            this.button_keDonThuoc.Location = new System.Drawing.Point(103, 532);
             this.button_keDonThuoc.Name = "button_keDonThuoc";
             this.button_keDonThuoc.Size = new System.Drawing.Size(127, 29);
             this.button_keDonThuoc.TabIndex = 8;
@@ -349,8 +617,9 @@ namespace QuanLyLichDangKiKhamBenh
             this.dataGridView_PatientMore.Name = "dataGridView_PatientMore";
             this.dataGridView_PatientMore.RowHeadersWidth = 51;
             this.dataGridView_PatientMore.RowTemplate.Height = 29;
-            this.dataGridView_PatientMore.Size = new System.Drawing.Size(910, 188);
+            this.dataGridView_PatientMore.Size = new System.Drawing.Size(1143, 188);
             this.dataGridView_PatientMore.TabIndex = 3;
+            this.dataGridView_PatientMore.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_PatientMore_CellContentClick);
             // 
             // textBox_Id2
             // 
@@ -380,198 +649,11 @@ namespace QuanLyLichDangKiKhamBenh
             this.label11.TabIndex = 0;
             this.label11.Text = "Chẩn Đoán Bệnh";
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label10.Location = new System.Drawing.Point(311, 294);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(92, 25);
-            this.label10.TabIndex = 20;
-            this.label10.Text = "Năm sinh";
-            // 
-            // comboBox_NhomMau
-            // 
-            this.comboBox_NhomMau.FormattingEnabled = true;
-            this.comboBox_NhomMau.Items.AddRange(new object[] {
-            "A",
-            "B",
-            "AB",
-            "O",
-            "A Rh+",
-            "A Rh-",
-            "B Rh+",
-            "B Rh-",
-            "AB Rh+",
-            "AB Rh-",
-            "O Rh+",
-            "O Rh-"});
-            this.comboBox_NhomMau.Location = new System.Drawing.Point(214, 360);
-            this.comboBox_NhomMau.Name = "comboBox_NhomMau";
-            this.comboBox_NhomMau.Size = new System.Drawing.Size(151, 28);
-            this.comboBox_NhomMau.TabIndex = 19;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Nam",
-            "Nữ",
-            "Khác"});
-            this.comboBox1.Location = new System.Drawing.Point(687, 291);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(151, 28);
-            this.comboBox1.TabIndex = 18;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(352, 15);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(230, 25);
-            this.label9.TabIndex = 17;
-            this.label9.Text = "THÊM BỆNH NHÂN";
-            // 
-            // button_Save
-            // 
-            this.button_Save.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button_Save.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button_Save.Location = new System.Drawing.Point(717, 539);
-            this.button_Save.Name = "button_Save";
-            this.button_Save.Size = new System.Drawing.Size(112, 42);
-            this.button_Save.TabIndex = 16;
-            this.button_Save.Text = "Save";
-            this.button_Save.UseVisualStyleBackColor = false;
-            this.button_Save.Click += new System.EventHandler(this.button_Save_Click);
-            // 
-            // textBox_CCCD
-            // 
-            this.textBox_CCCD.Location = new System.Drawing.Point(531, 358);
-            this.textBox_CCCD.Name = "textBox_CCCD";
-            this.textBox_CCCD.Size = new System.Drawing.Size(307, 27);
-            this.textBox_CCCD.TabIndex = 15;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(418, 360);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(56, 25);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "CCCD";
-            // 
-            // textBox_TienSuBenh
-            // 
-            this.textBox_TienSuBenh.Location = new System.Drawing.Point(42, 474);
-            this.textBox_TienSuBenh.Name = "textBox_TienSuBenh";
-            this.textBox_TienSuBenh.Size = new System.Drawing.Size(869, 27);
-            this.textBox_TienSuBenh.TabIndex = 13;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(42, 425);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(122, 25);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Tiền sử bệnh";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(84, 357);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(106, 25);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Nhóm máu";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(571, 290);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(89, 25);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Giới Tính";
-            // 
-            // textBox_Age
-            // 
-            this.textBox_Age.Location = new System.Drawing.Point(149, 292);
-            this.textBox_Age.Name = "textBox_Age";
-            this.textBox_Age.Size = new System.Drawing.Size(133, 27);
-            this.textBox_Age.TabIndex = 7;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(84, 291);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 25);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Tuổi";
-            // 
-            // textBox_Number
-            // 
-            this.textBox_Number.Location = new System.Drawing.Point(244, 222);
-            this.textBox_Number.Name = "textBox_Number";
-            this.textBox_Number.Size = new System.Drawing.Size(594, 27);
-            this.textBox_Number.TabIndex = 5;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(84, 222);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(124, 25);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Số điện thoại";
-            // 
-            // textBox_Address
-            // 
-            this.textBox_Address.Location = new System.Drawing.Point(244, 149);
-            this.textBox_Address.Name = "textBox_Address";
-            this.textBox_Address.Size = new System.Drawing.Size(594, 27);
-            this.textBox_Address.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(84, 149);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 25);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Địa Chỉ";
-            // 
-            // textBox_Name
-            // 
-            this.textBox_Name.Location = new System.Drawing.Point(244, 75);
-            this.textBox_Name.Name = "textBox_Name";
-            this.textBox_Name.Size = new System.Drawing.Size(594, 27);
-            this.textBox_Name.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(84, 75);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Họ Và Tên";
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(44, 355);
+            this.button1.Location = new System.Drawing.Point(12, 341);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(215, 39);
             this.button1.TabIndex = 24;
@@ -579,14 +661,16 @@ namespace QuanLyLichDangKiKhamBenh
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // taiKhoanBindingSource
+            // 
+            this.taiKhoanBindingSource.DataSource = typeof(QuanLyLichDangKiKhamBenh.TaiKhoan);
+            // 
             // Home
             // 
-            this.ClientSize = new System.Drawing.Size(1297, 667);
-            this.Controls.Add(this.panel_DS);
+            this.ClientSize = new System.Drawing.Size(1499, 798);
+            this.Controls.Add(this.panel_thembenhnhan);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel_ChandoanBenh);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button_Thoat);
             this.Controls.Add(this.button_DSachBenhNhan);
             this.Controls.Add(this.Button_ChanDoanBenh);
@@ -594,14 +678,16 @@ namespace QuanLyLichDangKiKhamBenh
             this.Controls.Add(this.C);
             this.Name = "Home";
             this.Text = "Trang Chủ";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panel_thembenhnhan.ResumeLayout(false);
+            this.panel_thembenhnhan.PerformLayout();
+            this.panel_DS.ResumeLayout(false);
+            this.panel_DS.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Full)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAdd)).EndInit();
             this.panel_ChandoanBenh.ResumeLayout(false);
             this.panel_ChandoanBenh.PerformLayout();
-            this.panel_DS.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Full)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_PatientMore)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.taiKhoanBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -609,9 +695,9 @@ namespace QuanLyLichDangKiKhamBenh
 
         private void Home_Load()
         {
-            panel1.Visible = false;
+            panel_thembenhnhan.Visible = false;
             panel_ChandoanBenh.Visible = false;
-            panel_DS.Visible = false;
+            panel_DS.Visible = true;
         }
 
         private void Button_ThemBenhNhan_Click(object sender, EventArgs e)
@@ -621,8 +707,9 @@ namespace QuanLyLichDangKiKhamBenh
             button_DSachBenhNhan.BackColor = Color.White;
 
             panel_ChandoanBenh.Visible = false;
-            panel1.Visible = true;
+            panel_thembenhnhan.Visible = true;
             panel_DS.Visible = false;
+            RefreshDataGridView();
         }
 
         private void Button_ChanDoanBenh_Click(object sender, EventArgs e)
@@ -633,7 +720,7 @@ namespace QuanLyLichDangKiKhamBenh
 
             // an panel
 
-            panel1.Visible = false;
+            panel_thembenhnhan.Visible = false;
             panel_ChandoanBenh.Visible = true;
             panel_DS.Visible = false;
         }
@@ -643,7 +730,7 @@ namespace QuanLyLichDangKiKhamBenh
             Button_ThemBenhNhan.BackColor = Color.White;
             Button_ChanDoanBenh.BackColor = Color.White;
             button_DSachBenhNhan.BackColor = Color.Yellow;
-            panel1.Visible = false;
+            panel_thembenhnhan.Visible = false;
             panel_DS.Visible = true;
             panel_ChandoanBenh.Visible = false;
 
@@ -773,6 +860,7 @@ namespace QuanLyLichDangKiKhamBenh
 
         }
 
+        // Them benh nhan
         private void button_Save_Click(object sender, EventArgs e)
         {
             String name = textBox_Name.Text;
@@ -879,6 +967,9 @@ namespace QuanLyLichDangKiKhamBenh
 
                     MessageBox.Show("Thêm bệnh nhân thành công");
 
+                    // cap nhật sao khi thêm bệnh nhan
+                    RefreshDataGridView();
+
                     // Clear input fields
                     ClearInputFields();
                     // ... (your existing code)
@@ -888,6 +979,22 @@ namespace QuanLyLichDangKiKhamBenh
                     MessageBox.Show(ex.Message);
                 }
 
+            }
+        }
+
+        private void RefreshDataGridView()
+        {
+            using (SqlConnection sql = Connection.GetSqlConnection())
+            {
+                sql.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = sql;
+                cmd.CommandText = "select * from Patients ";
+                SqlDataAdapter DA = new SqlDataAdapter(cmd);
+                DataSet dataSet = new DataSet();
+                DA.Fill(dataSet);
+                dataGridViewAdd.DataSource = dataSet.Tables[0];
+                sql.Close();
             }
         }
 
@@ -903,10 +1010,10 @@ namespace QuanLyLichDangKiKhamBenh
             textBox_Year.Clear();
             comboBox1.Items.Clear();
             comboBox_NhomMau.Items.Clear();
-           
+
         }
         // ke don thuoc tu bang Excell
-        
+
         private void button_keDonThuoc_Click(object sender, EventArgs e)
         {
             try
@@ -922,7 +1029,7 @@ namespace QuanLyLichDangKiKhamBenh
                     worksheet.Cells["C1"].Value = "Cách Dùng";
 
                     // Lưu tệp Excel vào một đường dẫn cụ thể 
-                    
+
                     var filePath = Path.Combine("D:\\TaiLieuDaiHoc\\Nam4-Ki1\\XDHTTTQL\\QuanLyLichDangKiKhamBenh", "DonThuoc.xlsx");
 
 
@@ -940,6 +1047,435 @@ namespace QuanLyLichDangKiKhamBenh
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+            //ExportExcel();
+            //try
+            //{
+
+
+            //    // Xuất dữ liệu sang file Excel
+            //    using (ExcelPackage excelPackage = new ExcelPackage())
+            //    {
+            //        // Tên của sheet trong Excel
+            //        ExcelWorksheet worksheet = excelPackage.Workbook.Worksheets.Add("Patients");
+
+            //        // Thiết lập các cột trong Excel
+            //        worksheet.Cells["A1"].Value = "CCCD";
+            //        worksheet.Cells["B1"].Value = "Name";
+            //        worksheet.Cells["C1"].Value = "Gender";
+            //        worksheet.Cells["D1"].Value = "DayOfBirth";
+            //        worksheet.Cells["E1"].Value = "Contact";
+            //        worksheet.Cells["F1"].Value = "Age";
+            //        worksheet.Cells["G1"].Value = "BloodGroup";
+            //        worksheet.Cells["H1"].Value = "History";
+            //        worksheet.Cells["I1"].Value = "Address";
+
+            //        // Lấy dữ liệu từ database và điền vào Excel
+            //        using (SqlConnection connection = new SqlConnection("Data Source=KHAIBUI\\MSSQLSERVER02;Initial Catalog=QLDangKiKhamBenh;Integrated Security=True"))
+            //        {
+            //            connection.Open();
+            //            string query = "SELECT * FROM Patients";
+            //            SqlCommand command = new SqlCommand(query, connection);
+            //            SqlDataReader reader = command.ExecuteReader();
+
+            //            int row = 2; // Bắt đầu từ hàng thứ 2 để tránh việc ghi đè tiêu đề
+            //            while (reader.Read())
+            //            {
+            //                worksheet.Cells["A" + row].Value = reader["CCCD"];
+            //                worksheet.Cells["B" + row].Value = reader["Name"];
+            //                worksheet.Cells["C" + row].Value = reader["Gender"];
+            //                worksheet.Cells["D" + row].Value = reader["DayOfBirth"];
+            //                worksheet.Cells["E" + row].Value = reader["Contact"];
+            //                worksheet.Cells["F" + row].Value = reader["Age"];
+            //                worksheet.Cells["G" + row].Value = reader["BloodGroup"];
+            //                worksheet.Cells["H" + row].Value = reader["History"];
+            //                worksheet.Cells["I" + row].Value = reader["Address"];
+
+            //                row++;
+            //            }
+            //        }
+
+            //        // Lưu file Excel
+            //        using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+            //        {
+            //            saveFileDialog.Filter = "Excel files (*.xlsx)|*.xlsx";
+            //            saveFileDialog.ShowDialog();
+
+            //            if (saveFileDialog.FileName != "")
+            //            {
+            //                System.IO.File.WriteAllBytes(saveFileDialog.FileName, excelPackage.GetAsByteArray());
+            //                MessageBox.Show("Xuất dữ liệu thành công!");
+            //            }
+            //        }
+
+            //    }
+            //}
+
+
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("Lỗi: " + ex.Message);
+            //}
+        }
+
+        private void ExportExcel(string path)
+        {
+            Excel.Application application = new Excel.Application();
+            application.Application.Workbooks.Add(Type.Missing);
+            for (int i = 0; i < dataGridView_Full.Columns.Count; i++)
+            {
+                application.Cells[1, i + 1] = dataGridView_Full.Columns[i].HeaderText;
+
+            }
+            for (int i = 0; i < dataGridView_Full.Rows.Count; i++)
+            {
+                for (int j = 0; j < dataGridView_Full.Columns.Count; j++)
+                {
+                    application.Cells[i + 2, j + 1] = dataGridView_Full.Rows[i].Cells[j].Value;
+                }
+
+            }
+
+            application.Columns.AutoFit();
+            application.ActiveWorkbook.SaveCopyAs(path);
+            application.ActiveWorkbook.Saved = true;
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox_NhomMau_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView_PatientMore_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        // button sua for the add patient
+        private void Button_Sua_Click(object sender, EventArgs e)
+        {
+            String name = textBox_Name.Text;
+            String address = textBox_Address.Text;
+            String contactText = textBox_Number.Text;
+            int contact;
+            String ageText = textBox_Age.Text;
+            int Age;
+            String blood = comboBox_NhomMau.Text;
+            String cccdText = textBox_CCCD.Text;
+            int cCCD;
+            String history = textBox_TienSuBenh.Text;
+            String yearText = textBox_Year.Text;
+            int Year;
+            String gender = comboBox1.Text;
+
+            if (name.Trim() == "")
+            {
+                MessageBox.Show("Vui lòng nhâp tên bệnh nhân");
+            }
+            else if (address.Trim() == "")
+            {
+                MessageBox.Show("Vui lòng nhâp địa chỉ bệnh nhân");
+            }
+            else if (!int.TryParse(contactText, out contact) || contact <= 0)
+            {
+                MessageBox.Show("Vui lòng nhập số điện thoại bệnh nhân hợp lệ");
+            }
+            else if (!int.TryParse(ageText, out Age) || Age <= 0)
+            {
+                MessageBox.Show("Vui lòng nhập số tuổi bệnh nhân hợp lệ");
+            }
+            else if (!int.TryParse(cccdText, out cCCD) || cCCD <= 0)
+            {
+                MessageBox.Show("Vui lòng nhập số Căn cước của bệnh nhân hợp lệ");
+            }
+            else if (!int.TryParse(yearText, out Year) || Year <= 0)
+            {
+                MessageBox.Show("Vui lòng nhập năm sinh của bệnh nhân hợp lệ");
+            }
+            else
+            {
+
+
+                try
+                {
+                    // Create a patient object
+                    Patients updatedPatient = new Patients
+                    {
+                        CCCD = cCCD,
+                        Name = name,
+                        Gender = gender,
+                        DayOfBirth = new DateTime(Year, 1, 1),
+                        Contact = contact,
+                        BloodGroup = blood,
+                        History = history,
+                        Address = address
+                    };
+
+
+
+
+
+                    // Update the existing patient in the database
+                    modiffy.UpdatePatient(updatedPatient);
+
+                    MessageBox.Show("Cập nhật bệnh nhân thành công");
+
+                    // Refresh the DataGridView after updating patient
+                    RefreshDataGridView();
+
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
+            }
+        }
+
+        // button xoa for the add patient
+        private void button_xoa_Click(object sender, EventArgs e)
+        {
+            String cccdText = textBox_CCCD.Text;
+            int cCCD;
+
+            if (!int.TryParse(cccdText, out cCCD) || cCCD <= 0)
+            {
+                MessageBox.Show("Vui lòng nhập số Căn cước của bệnh nhân hợp lệ");
+            }
+            else
+            {
+                try
+                {
+                    // Call the function to delete the patient
+                    modiffy.DeletePatient(cCCD);
+
+                    MessageBox.Show("Xóa bệnh nhân " + cCCD + " thành công !!");
+                    RefreshDataGridView();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridViewAdd_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridViewAdd.SelectedRows.Count > 0)
+            {
+                // Assuming the columns in the DataGridView are in the same order as your fields
+
+                // Set the value of textBox_CCCD using the content of the first column (Column 0)
+                textBox_CCCD.Text = dataGridViewAdd.SelectedRows[0].Cells[0].Value.ToString(); // Column 0
+
+                // Set the value of textBox_Name using the content of the second column (Column 1)
+                textBox_Name.Text = dataGridViewAdd.SelectedRows[0].Cells[1].Value.ToString(); // Column 1
+
+                // Set the value of textBox_Gender using the content of the third column (Column 2)
+                comboBox1.Text = dataGridViewAdd.SelectedRows[0].Cells[2].Value.ToString(); // Column 2
+
+                // Set the value of textBox_DayOfBirth using the content of the fourth column (Column 3)
+                // Assuming textBox_Age is meant for age, as you didn't have textBox_Age in the provided code
+                textBox_Age.Text = dataGridViewAdd.SelectedRows[0].Cells[3].Value.ToString(); // Column 3
+
+                // Set the value of textBox_Contact using the content of the fifth column (Column 4)
+                textBox_Number.Text = dataGridViewAdd.SelectedRows[0].Cells[4].Value.ToString(); // Column 4
+
+                // Set the value of comboBox_NhomMau using the content of the sixth column (Column 5)
+                comboBox_NhomMau.Text = dataGridViewAdd.SelectedRows[0].Cells[5].Value.ToString(); // Column 5
+
+                // Set the value of textBox_History using the content of the seventh column (Column 6)
+                textBox_TienSuBenh.Text = dataGridViewAdd.SelectedRows[0].Cells[6].Value.ToString(); // Column 6
+
+                // Set the value of textBox_Address using the content of the eighth column (Column 7)
+                textBox_Address.Text = dataGridViewAdd.SelectedRows[0].Cells[7].Value.ToString(); // Column 7
+
+            }
+
+        }
+
+        private void C_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView_Full_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void comboBox_KhoaKhambenh_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox_CanGiamSAt_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_Chandoan_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_TrieuChung_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_Year_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_CCCD_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_TienSuBenh_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_Age_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_Number_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_Address_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_Name_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void taiKhoanBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView_Full_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView_Full_CellContentClick_2(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dataGridView_Full.Rows[e.RowIndex];
+                string tenBenhNhan = row.Cells["TenBenhNhan"].Value.ToString();
+
+                // Gọi hàm để hiển thị form chỉnh sửa với tên bệnh nhân được chọn
+
+            }
+        }
+
+        // sua thong tin
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+        // xoa thong tin trong danh sach full
+
+        private void button3_Click(object sender, EventArgs e)
         {
 
         }

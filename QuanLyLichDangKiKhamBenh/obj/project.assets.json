@@ -2,11 +2,11 @@
   "version": 3,
   "targets": {
     "net6.0-windows7.0": {
-      "Azure.Core/1.25.0": {
+      "Azure.Core/1.35.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Bcl.AsyncInterfaces": "1.1.1",
-          "System.Diagnostics.DiagnosticSource": "4.6.0",
+          "System.Diagnostics.DiagnosticSource": "6.0.1",
           "System.Memory.Data": "1.0.2",
           "System.Numerics.Vectors": "4.5.0",
           "System.Text.Encodings.Web": "4.7.2",
@@ -14,22 +14,22 @@
           "System.Threading.Tasks.Extensions": "4.5.4"
         },
         "compile": {
-          "lib/net5.0/Azure.Core.dll": {
+          "lib/net6.0/Azure.Core.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net5.0/Azure.Core.dll": {
+          "lib/net6.0/Azure.Core.dll": {
             "related": ".xml"
           }
         }
       },
-      "Azure.Identity/1.8.0": {
+      "Azure.Identity/1.10.3": {
         "type": "package",
         "dependencies": {
-          "Azure.Core": "1.25.0",
-          "Microsoft.Identity.Client": "4.46.0",
-          "Microsoft.Identity.Client.Extensions.Msal": "2.23.0",
+          "Azure.Core": "1.35.0",
+          "Microsoft.Identity.Client": "4.56.0",
+          "Microsoft.Identity.Client.Extensions.Msal": "4.56.0",
           "System.Memory": "4.5.4",
           "System.Security.Cryptography.ProtectedData": "4.7.0",
           "System.Text.Json": "4.7.2",
@@ -46,7 +46,101 @@
           }
         }
       },
-      "EPPlus/7.0.3": {
+      "BouncyCastle/1.8.9": {
+        "type": "package",
+        "compile": {
+          "lib/BouncyCastle.Crypto.dll": {}
+        },
+        "runtime": {
+          "lib/BouncyCastle.Crypto.dll": {}
+        }
+      },
+      "Bunifu.UI.WinForms/5.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/Bunifu.Licensing.dll": {},
+          "lib/Bunifu.UI.WinForms.1.5.3.dll": {},
+          "lib/Bunifu.UI.WinForms.BunifuButton.dll": {},
+          "lib/Bunifu.UI.WinForms.BunifuCheckBox.dll": {},
+          "lib/Bunifu.UI.WinForms.BunifuCircleProgress.dll": {},
+          "lib/Bunifu.UI.WinForms.BunifuColorTransition.dll": {},
+          "lib/Bunifu.UI.WinForms.BunifuDataGridView.dll": {},
+          "lib/Bunifu.UI.WinForms.BunifuDatePicker.dll": {},
+          "lib/Bunifu.UI.WinForms.BunifuDropdown.dll": {},
+          "lib/Bunifu.UI.WinForms.BunifuFormDock.dll": {},
+          "lib/Bunifu.UI.WinForms.BunifuGauge.dll": {},
+          "lib/Bunifu.UI.WinForms.BunifuGradientPanel.dll": {},
+          "lib/Bunifu.UI.WinForms.BunifuGroupBox.dll": {},
+          "lib/Bunifu.UI.WinForms.BunifuImageButton.dll": {},
+          "lib/Bunifu.UI.WinForms.BunifuLabel.dll": {},
+          "lib/Bunifu.UI.WinForms.BunifuPages.dll": {},
+          "lib/Bunifu.UI.WinForms.BunifuPanel.dll": {},
+          "lib/Bunifu.UI.WinForms.BunifuPictureBox.dll": {},
+          "lib/Bunifu.UI.WinForms.BunifuProgressBar.dll": {},
+          "lib/Bunifu.UI.WinForms.BunifuRadioButton.dll": {},
+          "lib/Bunifu.UI.WinForms.BunifuRating.dll": {},
+          "lib/Bunifu.UI.WinForms.BunifuScrollBar.dll": {},
+          "lib/Bunifu.UI.WinForms.BunifuSeparator.dll": {},
+          "lib/Bunifu.UI.WinForms.BunifuShadowPanel.dll": {},
+          "lib/Bunifu.UI.WinForms.BunifuShapes.dll": {},
+          "lib/Bunifu.UI.WinForms.BunifuSlider.dll": {},
+          "lib/Bunifu.UI.WinForms.BunifuSnackbar.dll": {},
+          "lib/Bunifu.UI.WinForms.BunifuTextbox.dll": {},
+          "lib/Bunifu.UI.WinForms.BunifuToggleSwitch.dll": {},
+          "lib/Bunifu.UI.WinForms.BunifuToolTip.dll": {},
+          "lib/Bunifu.UI.WinForms.BunifuTransition.dll": {},
+          "lib/Bunifu.UI.WinForms.BunifuUserControl.dll": {},
+          "lib/Bunifu.UI.WinForms.Deprecated.dll": {}
+        },
+        "runtime": {
+          "lib/Bunifu.Licensing.dll": {},
+          "lib/Bunifu.UI.WinForms.1.5.3.dll": {},
+          "lib/Bunifu.UI.WinForms.BunifuButton.dll": {},
+          "lib/Bunifu.UI.WinForms.BunifuCheckBox.dll": {},
+          "lib/Bunifu.UI.WinForms.BunifuCircleProgress.dll": {},
+          "lib/Bunifu.UI.WinForms.BunifuColorTransition.dll": {},
+          "lib/Bunifu.UI.WinForms.BunifuDataGridView.dll": {},
+          "lib/Bunifu.UI.WinForms.BunifuDatePicker.dll": {},
+          "lib/Bunifu.UI.WinForms.BunifuDropdown.dll": {},
+          "lib/Bunifu.UI.WinForms.BunifuFormDock.dll": {},
+          "lib/Bunifu.UI.WinForms.BunifuGauge.dll": {},
+          "lib/Bunifu.UI.WinForms.BunifuGradientPanel.dll": {},
+          "lib/Bunifu.UI.WinForms.BunifuGroupBox.dll": {},
+          "lib/Bunifu.UI.WinForms.BunifuImageButton.dll": {},
+          "lib/Bunifu.UI.WinForms.BunifuLabel.dll": {},
+          "lib/Bunifu.UI.WinForms.BunifuPages.dll": {},
+          "lib/Bunifu.UI.WinForms.BunifuPanel.dll": {},
+          "lib/Bunifu.UI.WinForms.BunifuPictureBox.dll": {},
+          "lib/Bunifu.UI.WinForms.BunifuProgressBar.dll": {},
+          "lib/Bunifu.UI.WinForms.BunifuRadioButton.dll": {},
+          "lib/Bunifu.UI.WinForms.BunifuRating.dll": {},
+          "lib/Bunifu.UI.WinForms.BunifuScrollBar.dll": {},
+          "lib/Bunifu.UI.WinForms.BunifuSeparator.dll": {},
+          "lib/Bunifu.UI.WinForms.BunifuShadowPanel.dll": {},
+          "lib/Bunifu.UI.WinForms.BunifuShapes.dll": {},
+          "lib/Bunifu.UI.WinForms.BunifuSlider.dll": {},
+          "lib/Bunifu.UI.WinForms.BunifuSnackbar.dll": {},
+          "lib/Bunifu.UI.WinForms.BunifuTextbox.dll": {},
+          "lib/Bunifu.UI.WinForms.BunifuToggleSwitch.dll": {},
+          "lib/Bunifu.UI.WinForms.BunifuToolTip.dll": {},
+          "lib/Bunifu.UI.WinForms.BunifuTransition.dll": {},
+          "lib/Bunifu.UI.WinForms.BunifuUserControl.dll": {},
+          "lib/Bunifu.UI.WinForms.Deprecated.dll": {}
+        }
+      },
+      "Bunifu.Utils/1.0.5": {
+        "type": "package",
+        "dependencies": {
+          "Bunifu.UI.WinForms": "5.0.1"
+        },
+        "compile": {
+          "lib/net45/Bunifu.Utils.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Bunifu.Utils.dll": {}
+        }
+      },
+      "EPPlus/7.0.4": {
         "type": "package",
         "dependencies": {
           "EPPlus.Interfaces": "6.1.1",
@@ -90,6 +184,18 @@
           "lib/net6.0/EPPlus.System.Drawing.dll": {}
         }
       },
+      "iTextSharp/5.5.13.3": {
+        "type": "package",
+        "dependencies": {
+          "BouncyCastle": "1.8.9"
+        },
+        "compile": {
+          "lib/itextsharp.dll": {}
+        },
+        "runtime": {
+          "lib/itextsharp.dll": {}
+        }
+      },
       "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
         "type": "package",
         "compile": {
@@ -110,19 +216,17 @@
           "lib/netcoreapp2.0/_._": {}
         }
       },
-      "Microsoft.Data.SqlClient/5.2.0-preview3.23201.1": {
+      "Microsoft.Data.SqlClient/5.2.0-preview4.23342.2": {
         "type": "package",
         "dependencies": {
-          "Azure.Identity": "1.8.0",
-          "Microsoft.Data.SqlClient.SNI.runtime": "5.1.0",
-          "Microsoft.Identity.Client": "4.53.0",
+          "Azure.Identity": "1.10.3",
+          "Microsoft.Data.SqlClient.SNI.runtime": "5.2.0-preview1.23340.1",
+          "Microsoft.Identity.Client": "4.56.0",
           "Microsoft.IdentityModel.JsonWebTokens": "6.24.0",
           "Microsoft.IdentityModel.Protocols.OpenIdConnect": "6.24.0",
           "Microsoft.SqlServer.Server": "1.0.0",
           "System.Configuration.ConfigurationManager": "6.0.1",
           "System.Runtime.Caching": "6.0.0",
-          "System.Security.Cryptography.Cng": "5.0.0",
-          "System.Security.Principal.Windows": "5.0.0",
           "System.Text.Encoding.CodePages": "6.0.0",
           "System.Text.Encodings.Web": "6.0.0"
         },
@@ -136,6 +240,38 @@
             "related": ".pdb;.xml"
           }
         },
+        "resource": {
+          "lib/net6.0/de/Microsoft.Data.SqlClient.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net6.0/es/Microsoft.Data.SqlClient.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net6.0/fr/Microsoft.Data.SqlClient.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net6.0/it/Microsoft.Data.SqlClient.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net6.0/ja/Microsoft.Data.SqlClient.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net6.0/ko/Microsoft.Data.SqlClient.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net6.0/pt-BR/Microsoft.Data.SqlClient.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net6.0/ru/Microsoft.Data.SqlClient.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net6.0/zh-Hans/Microsoft.Data.SqlClient.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/net6.0/zh-Hant/Microsoft.Data.SqlClient.resources.dll": {
+            "locale": "zh-Hant"
+          }
+        },
         "runtimeTargets": {
           "runtimes/unix/lib/net6.0/Microsoft.Data.SqlClient.dll": {
             "assetType": "runtime",
@@ -147,7 +283,7 @@
           }
         }
       },
-      "Microsoft.Data.SqlClient.SNI.runtime/5.1.0": {
+      "Microsoft.Data.SqlClient.SNI.runtime/5.2.0-preview1.23340.1": {
         "type": "package",
         "runtimeTargets": {
           "runtimes/win-arm/native/Microsoft.Data.SqlClient.SNI.dll": {
@@ -316,10 +452,10 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
-      "Microsoft.Identity.Client/4.53.0": {
+      "Microsoft.Identity.Client/4.56.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Identity.Client.NativeInterop": "0.13.7",
+          "Microsoft.Identity.Client.NativeInterop": "0.13.8",
           "Microsoft.IdentityModel.Abstractions": "6.22.0",
           "Microsoft.Web.WebView2": "1.0.864.35"
         },
@@ -337,25 +473,25 @@
           "Microsoft.WindowsDesktop.App.WindowsForms"
         ]
       },
-      "Microsoft.Identity.Client.Extensions.Msal/2.23.0": {
+      "Microsoft.Identity.Client.Extensions.Msal/4.56.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Identity.Client": "4.46.0",
+          "Microsoft.Identity.Client": "4.56.0",
           "System.IO.FileSystem.AccessControl": "5.0.0",
           "System.Security.Cryptography.ProtectedData": "4.5.0"
         },
         "compile": {
-          "lib/netcoreapp3.1/Microsoft.Identity.Client.Extensions.Msal.dll": {
+          "lib/netstandard2.0/Microsoft.Identity.Client.Extensions.Msal.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netcoreapp3.1/Microsoft.Identity.Client.Extensions.Msal.dll": {
+          "lib/netstandard2.0/Microsoft.Identity.Client.Extensions.Msal.dll": {
             "related": ".xml"
           }
         }
       },
-      "Microsoft.Identity.Client.NativeInterop/0.13.7": {
+      "Microsoft.Identity.Client.NativeInterop/0.13.8": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Microsoft.Identity.Client.NativeInterop.dll": {}
@@ -506,6 +642,15 @@
         },
         "runtime": {
           "lib/netstandard1.0/_._": {}
+        }
+      },
+      "Microsoft.Office.Interop.Excel/15.0.4795.1001": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Office.Interop.Excel.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Office.Interop.Excel.dll": {}
         }
       },
       "Microsoft.SqlServer.Server/1.0.0": {
@@ -708,17 +853,23 @@
           }
         }
       },
-      "System.Diagnostics.DiagnosticSource/4.6.0": {
+      "System.Diagnostics.DiagnosticSource/6.0.1": {
         "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        },
         "compile": {
-          "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll": {
+          "lib/net6.0/System.Diagnostics.DiagnosticSource.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll": {
+          "lib/net6.0/System.Diagnostics.DiagnosticSource.dll": {
             "related": ".xml"
           }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
       "System.Drawing.Common/6.0.0": {
@@ -914,23 +1065,18 @@
           }
         }
       },
-      "System.Security.Cryptography.Cng/5.0.0": {
+      "System.Security.Cryptography.Cng/4.5.0": {
         "type": "package",
-        "dependencies": {
-          "System.Formats.Asn1": "5.0.0"
-        },
         "compile": {
-          "ref/netcoreapp3.0/System.Security.Cryptography.Cng.dll": {
+          "ref/netcoreapp2.1/System.Security.Cryptography.Cng.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netcoreapp3.0/System.Security.Cryptography.Cng.dll": {
-            "related": ".xml"
-          }
+          "lib/netcoreapp2.1/System.Security.Cryptography.Cng.dll": {}
         },
         "runtimeTargets": {
-          "runtimes/win/lib/netcoreapp3.0/System.Security.Cryptography.Cng.dll": {
+          "runtimes/win/lib/netcoreapp2.1/System.Security.Cryptography.Cng.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -1143,53 +1289,162 @@
     }
   },
   "libraries": {
-    "Azure.Core/1.25.0": {
-      "sha512": "X8Dd4sAggS84KScWIjEbFAdt2U1KDolQopTPoHVubG2y3CM54f9l6asVrP5Uy384NWXjsspPYaJgz5xHc+KvTA==",
+    "Azure.Core/1.35.0": {
+      "sha512": "hENcx03Jyuqv05F4RBEPbxz29UrM3Nbhnr6Wl6NQpoU9BCIbL3XLentrxDCTrH54NLS11Exxi/o8MYgT/cnKFA==",
       "type": "package",
-      "path": "azure.core/1.25.0",
+      "path": "azure.core/1.35.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "CHANGELOG.md",
         "README.md",
-        "azure.core.1.25.0.nupkg.sha512",
+        "azure.core.1.35.0.nupkg.sha512",
         "azure.core.nuspec",
         "azureicon.png",
         "lib/net461/Azure.Core.dll",
         "lib/net461/Azure.Core.xml",
+        "lib/net472/Azure.Core.dll",
+        "lib/net472/Azure.Core.xml",
         "lib/net5.0/Azure.Core.dll",
         "lib/net5.0/Azure.Core.xml",
+        "lib/net6.0/Azure.Core.dll",
+        "lib/net6.0/Azure.Core.xml",
         "lib/netcoreapp2.1/Azure.Core.dll",
         "lib/netcoreapp2.1/Azure.Core.xml",
         "lib/netstandard2.0/Azure.Core.dll",
         "lib/netstandard2.0/Azure.Core.xml"
       ]
     },
-    "Azure.Identity/1.8.0": {
-      "sha512": "xnsY/lgAG4bO5d2akXc1hqfvknIk+u3gh5Ma33KN2uyNeU3C5AzIfrwO/N/b9D/7dk4MyXai4JGKHNgHjcoFsA==",
+    "Azure.Identity/1.10.3": {
+      "sha512": "l1Xm2MWOF2Mzcwuarlw8kWQXLZk3UeB55aQXVyjj23aBfDwOZ3gu5GP2kJ6KlmZeZv2TCzw7x4L3V36iNr3gww==",
       "type": "package",
-      "path": "azure.identity/1.8.0",
+      "path": "azure.identity/1.10.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "CHANGELOG.md",
         "README.md",
-        "azure.identity.1.8.0.nupkg.sha512",
+        "azure.identity.1.10.3.nupkg.sha512",
         "azure.identity.nuspec",
         "azureicon.png",
         "lib/netstandard2.0/Azure.Identity.dll",
         "lib/netstandard2.0/Azure.Identity.xml"
       ]
     },
-    "EPPlus/7.0.3": {
-      "sha512": "2glvViZ12VzGItZa+SYm7Ka6sv/8mBW6KYBetKtDSsZE3OqaX9x7Gbkdd4y1rjawOS5qheqQ/TCqnN6NuL1IIQ==",
+    "BouncyCastle/1.8.9": {
+      "sha512": "axnBgvdD5n+FnEG6efk/tfKuMFru7R/EoISH9zjh319yb3HD24TEHSAbNN/lTRT2ulOGRxDgOsCjkuk08iwWPg==",
       "type": "package",
-      "path": "epplus/7.0.3",
+      "path": "bouncycastle/1.8.9",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "bouncycastle.1.8.9.nupkg.sha512",
+        "bouncycastle.nuspec",
+        "lib/BouncyCastle.Crypto.dll"
+      ]
+    },
+    "Bunifu.UI.WinForms/5.0.1": {
+      "sha512": "nC0iaWNJeovnww7lXSU+Knb0oT1KxgdizhbrklJOGtb5DexhXY9W8Rcbi0lvOwtUk6Z8WVrh7ZObgTSyo8FfCA==",
+      "type": "package",
+      "path": "bunifu.ui.winforms/5.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.txt",
+        "bunifu.ui.winforms.5.0.1.nupkg.sha512",
+        "bunifu.ui.winforms.nuspec",
+        "lib/Assets/CHANGELOG.txt",
+        "lib/Assets/Icon.png",
+        "lib/Assets/LICENSE.txt",
+        "lib/Bunifu.Licensing.dll",
+        "lib/Bunifu.UI.WinForms.1.5.3.dll",
+        "lib/Bunifu.UI.WinForms.1.5.3.xml",
+        "lib/Bunifu.UI.WinForms.BunifuButton.dll",
+        "lib/Bunifu.UI.WinForms.BunifuButton.xml",
+        "lib/Bunifu.UI.WinForms.BunifuCheckBox.dll",
+        "lib/Bunifu.UI.WinForms.BunifuCheckBox.xml",
+        "lib/Bunifu.UI.WinForms.BunifuCircleProgress.dll",
+        "lib/Bunifu.UI.WinForms.BunifuCircleProgress.xml",
+        "lib/Bunifu.UI.WinForms.BunifuColorTransition.dll",
+        "lib/Bunifu.UI.WinForms.BunifuColorTransition.xml",
+        "lib/Bunifu.UI.WinForms.BunifuDataGridView.dll",
+        "lib/Bunifu.UI.WinForms.BunifuDataGridView.xml",
+        "lib/Bunifu.UI.WinForms.BunifuDatePicker.dll",
+        "lib/Bunifu.UI.WinForms.BunifuDatePicker.xml",
+        "lib/Bunifu.UI.WinForms.BunifuDropdown.dll",
+        "lib/Bunifu.UI.WinForms.BunifuDropdown.xml",
+        "lib/Bunifu.UI.WinForms.BunifuFormDock.dll",
+        "lib/Bunifu.UI.WinForms.BunifuFormDock.xml",
+        "lib/Bunifu.UI.WinForms.BunifuGauge.dll",
+        "lib/Bunifu.UI.WinForms.BunifuGauge.xml",
+        "lib/Bunifu.UI.WinForms.BunifuGradientPanel.dll",
+        "lib/Bunifu.UI.WinForms.BunifuGradientPanel.xml",
+        "lib/Bunifu.UI.WinForms.BunifuGroupBox.dll",
+        "lib/Bunifu.UI.WinForms.BunifuGroupBox.xml",
+        "lib/Bunifu.UI.WinForms.BunifuImageButton.dll",
+        "lib/Bunifu.UI.WinForms.BunifuImageButton.xml",
+        "lib/Bunifu.UI.WinForms.BunifuLabel.dll",
+        "lib/Bunifu.UI.WinForms.BunifuLabel.xml",
+        "lib/Bunifu.UI.WinForms.BunifuPages.dll",
+        "lib/Bunifu.UI.WinForms.BunifuPages.xml",
+        "lib/Bunifu.UI.WinForms.BunifuPanel.dll",
+        "lib/Bunifu.UI.WinForms.BunifuPanel.xml",
+        "lib/Bunifu.UI.WinForms.BunifuPictureBox.dll",
+        "lib/Bunifu.UI.WinForms.BunifuPictureBox.xml",
+        "lib/Bunifu.UI.WinForms.BunifuProgressBar.dll",
+        "lib/Bunifu.UI.WinForms.BunifuProgressBar.xml",
+        "lib/Bunifu.UI.WinForms.BunifuRadioButton.dll",
+        "lib/Bunifu.UI.WinForms.BunifuRadioButton.xml",
+        "lib/Bunifu.UI.WinForms.BunifuRating.dll",
+        "lib/Bunifu.UI.WinForms.BunifuRating.xml",
+        "lib/Bunifu.UI.WinForms.BunifuScrollBar.dll",
+        "lib/Bunifu.UI.WinForms.BunifuScrollBar.xml",
+        "lib/Bunifu.UI.WinForms.BunifuSeparator.dll",
+        "lib/Bunifu.UI.WinForms.BunifuSeparator.xml",
+        "lib/Bunifu.UI.WinForms.BunifuShadowPanel.dll",
+        "lib/Bunifu.UI.WinForms.BunifuShadowPanel.xml",
+        "lib/Bunifu.UI.WinForms.BunifuShapes.dll",
+        "lib/Bunifu.UI.WinForms.BunifuShapes.xml",
+        "lib/Bunifu.UI.WinForms.BunifuSlider.dll",
+        "lib/Bunifu.UI.WinForms.BunifuSlider.xml",
+        "lib/Bunifu.UI.WinForms.BunifuSnackbar.dll",
+        "lib/Bunifu.UI.WinForms.BunifuSnackbar.xml",
+        "lib/Bunifu.UI.WinForms.BunifuTextBox.xml",
+        "lib/Bunifu.UI.WinForms.BunifuTextbox.dll",
+        "lib/Bunifu.UI.WinForms.BunifuToggleSwitch.dll",
+        "lib/Bunifu.UI.WinForms.BunifuToggleSwitch.xml",
+        "lib/Bunifu.UI.WinForms.BunifuToolTip.dll",
+        "lib/Bunifu.UI.WinForms.BunifuToolTip.xml",
+        "lib/Bunifu.UI.WinForms.BunifuTransition.dll",
+        "lib/Bunifu.UI.WinForms.BunifuTransition.xml",
+        "lib/Bunifu.UI.WinForms.BunifuUserControl.dll",
+        "lib/Bunifu.UI.WinForms.BunifuUserControl.xml",
+        "lib/Bunifu.UI.WinForms.Deprecated.dll"
+      ]
+    },
+    "Bunifu.Utils/1.0.5": {
+      "sha512": "2TYLfyvLHNsOnN7/5vM1Ms2cW2cUwk+qJpGDg+c/a2wSHjcsIi16AuniKvzBZL5+AMf+8Yu30WrNQUsyue3UQw==",
+      "type": "package",
+      "path": "bunifu.utils/1.0.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "bunifu.utils.1.0.5.nupkg.sha512",
+        "bunifu.utils.nuspec",
+        "lib/Assets/icon.png",
+        "lib/net45/Bunifu.Utils.dll"
+      ]
+    },
+    "EPPlus/7.0.4": {
+      "sha512": "1m/1jdbK9LkRLb6DllmEFYoS/KqA2zaypmGwC+h4P13dW5IObJRzAjZ5VdgdA7fkKg9GUm2YXa8/JqMv5zYv3Q==",
+      "type": "package",
+      "path": "epplus/7.0.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "EPPlusLogo.png",
-        "epplus.7.0.3.nupkg.sha512",
+        "epplus.7.0.4.nupkg.sha512",
         "epplus.nuspec",
         "lib/net35/EPPlus.dll",
         "lib/net35/EPPlus.xml",
@@ -1248,6 +1503,22 @@
         "lib/netstandard2.1/EPPlus.System.Drawing.dll",
         "license.md",
         "readme.md"
+      ]
+    },
+    "iTextSharp/5.5.13.3": {
+      "sha512": "vtnMhTEJdZFCkLqaQLjD8aqTBIVKHPrSFuSXnxbLEJlvE/j/l88fvG9wtsejXTmhtErMo0lA9T2LdfdfbwplYw==",
+      "type": "package",
+      "path": "itextsharp/5.5.13.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "gnu-agpl-v3.0.md",
+        "itextsharp.5.5.13.3.nupkg.sha512",
+        "itextsharp.nuspec",
+        "lib/iTextSharp.xml",
+        "lib/itextsharp.dll",
+        "notice.txt"
       ]
     },
     "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
@@ -1343,10 +1614,10 @@
         "version.txt"
       ]
     },
-    "Microsoft.Data.SqlClient/5.2.0-preview3.23201.1": {
-      "sha512": "1J2imP4ynNf5Bcp5CLQWJlyH4fcHDYSTa+1wAhJnGARmPOa4w5ezIdhuCODwl7nAWSlBeYXDIOz+d3ZSc4cMeQ==",
+    "Microsoft.Data.SqlClient/5.2.0-preview4.23342.2": {
+      "sha512": "/sDrws9xeRsc9mHjZqnKoBxp+2PHUKgFt84lgqeX4NYxY5naIq536kvDXGHZU953TuLYvrghzeLizsX6eHDCBA==",
       "type": "package",
-      "path": "microsoft.data.sqlclient/5.2.0-preview3.23201.1",
+      "path": "microsoft.data.sqlclient/5.2.0-preview4.23342.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1367,16 +1638,56 @@
         "lib/net6.0/Microsoft.Data.SqlClient.dll",
         "lib/net6.0/Microsoft.Data.SqlClient.pdb",
         "lib/net6.0/Microsoft.Data.SqlClient.xml",
+        "lib/net6.0/de/Microsoft.Data.SqlClient.resources.dll",
+        "lib/net6.0/es/Microsoft.Data.SqlClient.resources.dll",
+        "lib/net6.0/fr/Microsoft.Data.SqlClient.resources.dll",
+        "lib/net6.0/it/Microsoft.Data.SqlClient.resources.dll",
+        "lib/net6.0/ja/Microsoft.Data.SqlClient.resources.dll",
+        "lib/net6.0/ko/Microsoft.Data.SqlClient.resources.dll",
+        "lib/net6.0/pt-BR/Microsoft.Data.SqlClient.resources.dll",
+        "lib/net6.0/ru/Microsoft.Data.SqlClient.resources.dll",
+        "lib/net6.0/zh-Hans/Microsoft.Data.SqlClient.resources.dll",
+        "lib/net6.0/zh-Hant/Microsoft.Data.SqlClient.resources.dll",
         "lib/net7.0/Microsoft.Data.SqlClient.dll",
         "lib/net7.0/Microsoft.Data.SqlClient.pdb",
         "lib/net7.0/Microsoft.Data.SqlClient.xml",
+        "lib/net7.0/de/Microsoft.Data.SqlClient.resources.dll",
+        "lib/net7.0/es/Microsoft.Data.SqlClient.resources.dll",
+        "lib/net7.0/fr/Microsoft.Data.SqlClient.resources.dll",
+        "lib/net7.0/it/Microsoft.Data.SqlClient.resources.dll",
+        "lib/net7.0/ja/Microsoft.Data.SqlClient.resources.dll",
+        "lib/net7.0/ko/Microsoft.Data.SqlClient.resources.dll",
+        "lib/net7.0/pt-BR/Microsoft.Data.SqlClient.resources.dll",
+        "lib/net7.0/ru/Microsoft.Data.SqlClient.resources.dll",
+        "lib/net7.0/zh-Hans/Microsoft.Data.SqlClient.resources.dll",
+        "lib/net7.0/zh-Hant/Microsoft.Data.SqlClient.resources.dll",
         "lib/netstandard2.0/Microsoft.Data.SqlClient.dll",
         "lib/netstandard2.0/Microsoft.Data.SqlClient.pdb",
         "lib/netstandard2.0/Microsoft.Data.SqlClient.xml",
+        "lib/netstandard2.0/de/Microsoft.Data.SqlClient.resources.dll",
+        "lib/netstandard2.0/es/Microsoft.Data.SqlClient.resources.dll",
+        "lib/netstandard2.0/fr/Microsoft.Data.SqlClient.resources.dll",
+        "lib/netstandard2.0/it/Microsoft.Data.SqlClient.resources.dll",
+        "lib/netstandard2.0/ja/Microsoft.Data.SqlClient.resources.dll",
+        "lib/netstandard2.0/ko/Microsoft.Data.SqlClient.resources.dll",
+        "lib/netstandard2.0/pt-BR/Microsoft.Data.SqlClient.resources.dll",
+        "lib/netstandard2.0/ru/Microsoft.Data.SqlClient.resources.dll",
+        "lib/netstandard2.0/zh-Hans/Microsoft.Data.SqlClient.resources.dll",
+        "lib/netstandard2.0/zh-Hant/Microsoft.Data.SqlClient.resources.dll",
         "lib/netstandard2.1/Microsoft.Data.SqlClient.dll",
         "lib/netstandard2.1/Microsoft.Data.SqlClient.pdb",
         "lib/netstandard2.1/Microsoft.Data.SqlClient.xml",
-        "microsoft.data.sqlclient.5.2.0-preview3.23201.1.nupkg.sha512",
+        "lib/netstandard2.1/de/Microsoft.Data.SqlClient.resources.dll",
+        "lib/netstandard2.1/es/Microsoft.Data.SqlClient.resources.dll",
+        "lib/netstandard2.1/fr/Microsoft.Data.SqlClient.resources.dll",
+        "lib/netstandard2.1/it/Microsoft.Data.SqlClient.resources.dll",
+        "lib/netstandard2.1/ja/Microsoft.Data.SqlClient.resources.dll",
+        "lib/netstandard2.1/ko/Microsoft.Data.SqlClient.resources.dll",
+        "lib/netstandard2.1/pt-BR/Microsoft.Data.SqlClient.resources.dll",
+        "lib/netstandard2.1/ru/Microsoft.Data.SqlClient.resources.dll",
+        "lib/netstandard2.1/zh-Hans/Microsoft.Data.SqlClient.resources.dll",
+        "lib/netstandard2.1/zh-Hant/Microsoft.Data.SqlClient.resources.dll",
+        "microsoft.data.sqlclient.5.2.0-preview4.23342.2.nupkg.sha512",
         "microsoft.data.sqlclient.nuspec",
         "ref/net462/Microsoft.Data.SqlClient.dll",
         "ref/net462/Microsoft.Data.SqlClient.pdb",
@@ -1413,16 +1724,16 @@
         "runtimes/win/lib/netstandard2.1/Microsoft.Data.SqlClient.pdb"
       ]
     },
-    "Microsoft.Data.SqlClient.SNI.runtime/5.1.0": {
-      "sha512": "jVsElisM5sfBzaaV9kdq2NXZLwIbytetnsOIlJ0cQGgQP4zFNBmkfHBnpwtmKrtBJBEV9+9PVQPVrcCVhDgcIg==",
+    "Microsoft.Data.SqlClient.SNI.runtime/5.2.0-preview1.23340.1": {
+      "sha512": "6Hv/CytFhqrc8z+9/fAF2jQ5GM9dWVSLpSxrJPo/8Sus/QKdpN9Sbb/OfY7QjasTJ7TKOiU81KCbIJmu+fkZ2g==",
       "type": "package",
-      "path": "microsoft.data.sqlclient.sni.runtime/5.1.0",
+      "path": "microsoft.data.sqlclient.sni.runtime/5.2.0-preview1.23340.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.txt",
         "dotnet.png",
-        "microsoft.data.sqlclient.sni.runtime.5.1.0.nupkg.sha512",
+        "microsoft.data.sqlclient.sni.runtime.5.2.0-preview1.23340.1.nupkg.sha512",
         "microsoft.data.sqlclient.sni.runtime.nuspec",
         "runtimes/win-arm/native/Microsoft.Data.SqlClient.SNI.dll",
         "runtimes/win-arm64/native/Microsoft.Data.SqlClient.SNI.dll",
@@ -1602,10 +1913,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.Identity.Client/4.53.0": {
-      "sha512": "N0qNbtiuziG0UBFbbju7az96t4lEOQtuonhV+yk1mx76q4o5hBzekOURxQM0EJNWBIi68w72LivMQJuFig6kQw==",
+    "Microsoft.Identity.Client/4.56.0": {
+      "sha512": "rr4zbidvHy9r4NvOAs5hdd964Ao2A0pAeFBJKR95u1CJAVzbd1p6tPTXUZ+5ld0cfThiVSGvz6UHwY6JjraTpA==",
       "type": "package",
-      "path": "microsoft.identity.client/4.53.0",
+      "path": "microsoft.identity.client/4.56.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1634,31 +1945,27 @@
         "lib/uap10.0.17763/Microsoft.Identity.Client.xml",
         "lib/xamarinios10/Microsoft.Identity.Client.dll",
         "lib/xamarinios10/Microsoft.Identity.Client.xml",
-        "microsoft.identity.client.4.53.0.nupkg.sha512",
+        "microsoft.identity.client.4.56.0.nupkg.sha512",
         "microsoft.identity.client.nuspec"
       ]
     },
-    "Microsoft.Identity.Client.Extensions.Msal/2.23.0": {
-      "sha512": "Q8K58FjUIVslHQlk+SIhFYjdy8B1A5Wt3GXxzLS7lnXXaSmbcGzk7d8haqLmR8z/DP99vpZC73SxMa83qSHcbQ==",
+    "Microsoft.Identity.Client.Extensions.Msal/4.56.0": {
+      "sha512": "H12YAzEGK55vZ+QpxUzozhW8ZZtgPDuWvgA0JbdIR9UhMUplj29JhIgE2imuH8W2Nw9D8JKygR1uxRFtpSNcrg==",
       "type": "package",
-      "path": "microsoft.identity.client.extensions.msal/2.23.0",
+      "path": "microsoft.identity.client.extensions.msal/4.56.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/net45/Microsoft.Identity.Client.Extensions.Msal.dll",
-        "lib/net45/Microsoft.Identity.Client.Extensions.Msal.xml",
-        "lib/netcoreapp3.1/Microsoft.Identity.Client.Extensions.Msal.dll",
-        "lib/netcoreapp3.1/Microsoft.Identity.Client.Extensions.Msal.xml",
         "lib/netstandard2.0/Microsoft.Identity.Client.Extensions.Msal.dll",
         "lib/netstandard2.0/Microsoft.Identity.Client.Extensions.Msal.xml",
-        "microsoft.identity.client.extensions.msal.2.23.0.nupkg.sha512",
+        "microsoft.identity.client.extensions.msal.4.56.0.nupkg.sha512",
         "microsoft.identity.client.extensions.msal.nuspec"
       ]
     },
-    "Microsoft.Identity.Client.NativeInterop/0.13.7": {
-      "sha512": "Ch7Nqsl3nUd+/BD5HNPw2GMfBtERfZmUsxueIz8vUvEvbOjqd5gwykJRZnvitWQ/s91XNP5mkRg3vPJjDW6MeQ==",
+    "Microsoft.Identity.Client.NativeInterop/0.13.8": {
+      "sha512": "eccVwaDOan12YJrh6ntIBIXeKTNoWz+af2/c13lhvrDoX0ydVXitCXMJVz0dh2eJK5y2KJ7IfkEvNilB/A9V7A==",
       "type": "package",
-      "path": "microsoft.identity.client.nativeinterop/0.13.7",
+      "path": "microsoft.identity.client.nativeinterop/0.13.8",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1666,7 +1973,7 @@
         "buildtransitive/net461/Microsoft.Identity.Client.NativeInterop.targets",
         "lib/net461/Microsoft.Identity.Client.NativeInterop.dll",
         "lib/netstandard2.0/Microsoft.Identity.Client.NativeInterop.dll",
-        "microsoft.identity.client.nativeinterop.0.13.7.nupkg.sha512",
+        "microsoft.identity.client.nativeinterop.0.13.8.nupkg.sha512",
         "microsoft.identity.client.nativeinterop.nuspec",
         "runtimes/win-arm64/native/msalruntime_arm64.dll",
         "runtimes/win-x64/native/msalruntime.dll",
@@ -1849,6 +2156,19 @@
         "microsoft.netcore.targets.1.1.0.nupkg.sha512",
         "microsoft.netcore.targets.nuspec",
         "runtime.json"
+      ]
+    },
+    "Microsoft.Office.Interop.Excel/15.0.4795.1001": {
+      "sha512": "cuvqi/U5MYSM0gvR2l90q0m/urRgmg69EiwP5VWp1RcaJ0YT5G26Va5LaOZ3KJFc22FNihS5CUjeePUp2YpGQA==",
+      "type": "package",
+      "path": "microsoft.office.interop.excel/15.0.4795.1001",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net20/Microsoft.Office.Interop.Excel.dll",
+        "lib/netstandard2.0/Microsoft.Office.Interop.Excel.dll",
+        "microsoft.office.interop.excel.15.0.4795.1001.nupkg.sha512",
+        "microsoft.office.interop.excel.nuspec"
       ]
     },
     "Microsoft.SqlServer.Server/1.0.0": {
@@ -2254,29 +2574,29 @@
         "version.txt"
       ]
     },
-    "System.Diagnostics.DiagnosticSource/4.6.0": {
-      "sha512": "mbBgoR0rRfl2uimsZ2avZY8g7Xnh1Mza0rJZLPcxqiMWlkGukjmRkuMJ/er+AhQuiRIh80CR/Hpeztr80seV5g==",
+    "System.Diagnostics.DiagnosticSource/6.0.1": {
+      "sha512": "KiLYDu2k2J82Q9BJpWiuQqCkFjRBWVq4jDzKKWawVi9KWzyD0XG3cmfX0vqTQlL14Wi9EufJrbL0+KCLTbqWiQ==",
       "type": "package",
-      "path": "system.diagnostics.diagnosticsource/4.6.0",
+      "path": "system.diagnostics.diagnosticsource/6.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
-        "lib/net45/System.Diagnostics.DiagnosticSource.dll",
-        "lib/net45/System.Diagnostics.DiagnosticSource.xml",
-        "lib/net46/System.Diagnostics.DiagnosticSource.dll",
-        "lib/net46/System.Diagnostics.DiagnosticSource.xml",
-        "lib/netstandard1.1/System.Diagnostics.DiagnosticSource.dll",
-        "lib/netstandard1.1/System.Diagnostics.DiagnosticSource.xml",
-        "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll",
-        "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.xml",
-        "lib/portable-net45+win8+wpa81/System.Diagnostics.DiagnosticSource.dll",
-        "lib/portable-net45+win8+wpa81/System.Diagnostics.DiagnosticSource.xml",
-        "system.diagnostics.diagnosticsource.4.6.0.nupkg.sha512",
+        "buildTransitive/netcoreapp2.0/System.Diagnostics.DiagnosticSource.targets",
+        "buildTransitive/netcoreapp3.1/_._",
+        "lib/net461/System.Diagnostics.DiagnosticSource.dll",
+        "lib/net461/System.Diagnostics.DiagnosticSource.xml",
+        "lib/net5.0/System.Diagnostics.DiagnosticSource.dll",
+        "lib/net5.0/System.Diagnostics.DiagnosticSource.xml",
+        "lib/net6.0/System.Diagnostics.DiagnosticSource.dll",
+        "lib/net6.0/System.Diagnostics.DiagnosticSource.xml",
+        "lib/netstandard2.0/System.Diagnostics.DiagnosticSource.dll",
+        "lib/netstandard2.0/System.Diagnostics.DiagnosticSource.xml",
+        "system.diagnostics.diagnosticsource.6.0.1.nupkg.sha512",
         "system.diagnostics.diagnosticsource.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
+        "useSharedDesignerContext.txt"
       ]
     },
     "System.Drawing.Common/6.0.0": {
@@ -2627,35 +2947,26 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "System.Security.Cryptography.Cng/5.0.0": {
-      "sha512": "jIMXsKn94T9JY7PvPq/tMfqa6GAaHpElRDpmG+SuL+D3+sTw2M8VhnibKnN8Tq+4JqbPJ/f+BwtLeDMEnzAvRg==",
+    "System.Security.Cryptography.Cng/4.5.0": {
+      "sha512": "WG3r7EyjUe9CMPFSs6bty5doUqT+q9pbI80hlNzo2SkPkZ4VTuZkGWjpp77JB8+uaL4DFPRdBsAY+DX3dBK92A==",
       "type": "package",
-      "path": "system.security.cryptography.cng/5.0.0",
+      "path": "system.security.cryptography.cng/4.5.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net46/System.Security.Cryptography.Cng.dll",
         "lib/net461/System.Security.Cryptography.Cng.dll",
-        "lib/net461/System.Security.Cryptography.Cng.xml",
         "lib/net462/System.Security.Cryptography.Cng.dll",
-        "lib/net462/System.Security.Cryptography.Cng.xml",
         "lib/net47/System.Security.Cryptography.Cng.dll",
-        "lib/net47/System.Security.Cryptography.Cng.xml",
         "lib/netcoreapp2.1/System.Security.Cryptography.Cng.dll",
-        "lib/netcoreapp3.0/System.Security.Cryptography.Cng.dll",
-        "lib/netcoreapp3.0/System.Security.Cryptography.Cng.xml",
         "lib/netstandard1.3/System.Security.Cryptography.Cng.dll",
         "lib/netstandard1.4/System.Security.Cryptography.Cng.dll",
         "lib/netstandard1.6/System.Security.Cryptography.Cng.dll",
         "lib/netstandard2.0/System.Security.Cryptography.Cng.dll",
-        "lib/netstandard2.0/System.Security.Cryptography.Cng.xml",
-        "lib/netstandard2.1/System.Security.Cryptography.Cng.dll",
-        "lib/netstandard2.1/System.Security.Cryptography.Cng.xml",
         "lib/uap10.0.16299/_._",
         "lib/xamarinios10/_._",
         "lib/xamarinmac20/_._",
@@ -2674,15 +2985,11 @@
         "ref/netcoreapp2.0/System.Security.Cryptography.Cng.xml",
         "ref/netcoreapp2.1/System.Security.Cryptography.Cng.dll",
         "ref/netcoreapp2.1/System.Security.Cryptography.Cng.xml",
-        "ref/netcoreapp3.0/System.Security.Cryptography.Cng.dll",
-        "ref/netcoreapp3.0/System.Security.Cryptography.Cng.xml",
         "ref/netstandard1.3/System.Security.Cryptography.Cng.dll",
         "ref/netstandard1.4/System.Security.Cryptography.Cng.dll",
         "ref/netstandard1.6/System.Security.Cryptography.Cng.dll",
         "ref/netstandard2.0/System.Security.Cryptography.Cng.dll",
         "ref/netstandard2.0/System.Security.Cryptography.Cng.xml",
-        "ref/netstandard2.1/System.Security.Cryptography.Cng.dll",
-        "ref/netstandard2.1/System.Security.Cryptography.Cng.xml",
         "ref/uap10.0.16299/_._",
         "ref/xamarinios10/_._",
         "ref/xamarinmac20/_._",
@@ -2690,19 +2997,14 @@
         "ref/xamarinwatchos10/_._",
         "runtimes/win/lib/net46/System.Security.Cryptography.Cng.dll",
         "runtimes/win/lib/net461/System.Security.Cryptography.Cng.dll",
-        "runtimes/win/lib/net461/System.Security.Cryptography.Cng.xml",
         "runtimes/win/lib/net462/System.Security.Cryptography.Cng.dll",
-        "runtimes/win/lib/net462/System.Security.Cryptography.Cng.xml",
         "runtimes/win/lib/net47/System.Security.Cryptography.Cng.dll",
-        "runtimes/win/lib/net47/System.Security.Cryptography.Cng.xml",
         "runtimes/win/lib/netcoreapp2.0/System.Security.Cryptography.Cng.dll",
         "runtimes/win/lib/netcoreapp2.1/System.Security.Cryptography.Cng.dll",
-        "runtimes/win/lib/netcoreapp3.0/System.Security.Cryptography.Cng.dll",
-        "runtimes/win/lib/netcoreapp3.0/System.Security.Cryptography.Cng.xml",
         "runtimes/win/lib/netstandard1.4/System.Security.Cryptography.Cng.dll",
         "runtimes/win/lib/netstandard1.6/System.Security.Cryptography.Cng.dll",
         "runtimes/win/lib/uap10.0.16299/_._",
-        "system.security.cryptography.cng.5.0.0.nupkg.sha512",
+        "system.security.cryptography.cng.4.5.0.nupkg.sha512",
         "system.security.cryptography.cng.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -3115,9 +3417,12 @@
   },
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
-      "EPPlus >= 7.0.3",
-      "Microsoft.Data.SqlClient >= 5.2.0-preview3.23201.1",
-      "System.Data.SqlClient >= 4.8.5"
+      "Bunifu.Utils >= 1.0.5",
+      "EPPlus >= 7.0.4",
+      "Microsoft.Data.SqlClient >= 5.2.0-preview4.23342.2",
+      "Microsoft.Office.Interop.Excel >= 15.0.4795.1001",
+      "System.Data.SqlClient >= 4.8.5",
+      "iTextSharp >= 5.5.13.3"
     ]
   },
   "packageFolders": {
@@ -3159,17 +3464,29 @@
       "net6.0-windows7.0": {
         "targetAlias": "net6.0-windows",
         "dependencies": {
+          "Bunifu.Utils": {
+            "target": "Package",
+            "version": "[1.0.5, )"
+          },
           "EPPlus": {
             "target": "Package",
-            "version": "[7.0.3, )"
+            "version": "[7.0.4, )"
           },
           "Microsoft.Data.SqlClient": {
             "target": "Package",
-            "version": "[5.2.0-preview3.23201.1, )"
+            "version": "[5.2.0-preview4.23342.2, )"
+          },
+          "Microsoft.Office.Interop.Excel": {
+            "target": "Package",
+            "version": "[15.0.4795.1001, )"
           },
           "System.Data.SqlClient": {
             "target": "Package",
             "version": "[4.8.5, )"
+          },
+          "iTextSharp": {
+            "target": "Package",
+            "version": "[5.5.13.3, )"
           }
         },
         "imports": [
@@ -3194,5 +3511,47 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'BouncyCastle 1.8.9' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "BouncyCastle",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Bunifu.UI.WinForms 5.0.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Bunifu.UI.WinForms",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Bunifu.Utils 1.0.5' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Bunifu.Utils",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'iTextSharp 5.5.13.3' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "iTextSharp",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    }
+  ]
 }
