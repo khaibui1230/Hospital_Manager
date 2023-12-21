@@ -154,6 +154,75 @@ namespace QuanLyLichDangKiKhamBenh
             }
         }
 
+        public void AddDoctor(Doctor doctor)
+        {
+            using (SqlConnection sqlConnection = Connection.GetSqlConnection())
+            {
+                sqlConnection.Open();
 
+                string query = "INSERT INTO Doctor (DocID, DocName, DocExp, DocGen, DocSpec, DocPass) " +
+                               "VALUES (@DocID, @DocName, @DocExp, @DocGen, @DocSpec, @DocPass)";
+
+                using (SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
+                {
+                    sqlCommand.Parameters.AddWithValue("@DocID", doctor.DocID);
+                    sqlCommand.Parameters.AddWithValue("@DocName", doctor.DocName);
+                    sqlCommand.Parameters.AddWithValue("@DocExp", doctor.DocExp);
+                    sqlCommand.Parameters.AddWithValue("@DocGen", doctor.Gender);
+                    sqlCommand.Parameters.AddWithValue("@DocSpec", doctor.DocSpec);
+                    sqlCommand.Parameters.AddWithValue("@DocPass", doctor.DocPass);
+
+                    sqlCommand.ExecuteNonQuery();
+                }
+
+                sqlConnection.Close();
+            }
+        }
+        public void UpdateDoctor(Doctor doctor)
+        {
+            using (SqlConnection sqlConnection = Connection.GetSqlConnection())
+            {
+                sqlConnection.Open();
+
+                string query =
+            "UPDATE Doctor " +
+            "SET DocName = @DocName, DocExp = @DocExp, DocGen = @DocGen, DocSpec = @DocSpec, DocPass = @DocPass " +
+            "WHERE DocID = @DocID";
+
+
+                using (SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
+                {
+                    sqlCommand.Parameters.AddWithValue("@DocID", doctor.DocID);
+                    sqlCommand.Parameters.AddWithValue("@DocName", doctor.DocName);
+                    sqlCommand.Parameters.AddWithValue("@DocExp", doctor.DocExp);
+                    sqlCommand.Parameters.AddWithValue("@DocGen", doctor.Gender);
+                    sqlCommand.Parameters.AddWithValue("@DocSpec", doctor.DocSpec);
+                    sqlCommand.Parameters.AddWithValue("@DocPass", doctor.DocPass);
+
+                    sqlCommand.ExecuteNonQuery();
+                }
+
+                sqlConnection.Close();
+            }
+        }
+
+        public void DeleteDoctor(int DocID)
+        {
+            using (SqlConnection sqlConnection = Connection.GetSqlConnection())
+            {
+                sqlConnection.Open();
+
+                string query = "DELETE FROM Doctor WHERE DocID = @DocID";
+
+                using (SqlCommand sqlCommand = new SqlCommand(query, sqlConnection))
+                {
+                    sqlCommand.Parameters.AddWithValue("@DocID", DocID);
+
+                    sqlCommand.ExecuteNonQuery();
+                }
+
+                sqlConnection.Close();
+            }
+        }
     }
 }

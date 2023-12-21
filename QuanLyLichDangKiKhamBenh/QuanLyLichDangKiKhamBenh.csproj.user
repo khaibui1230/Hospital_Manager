@@ -13,6 +13,12 @@
     <Compile Update="DashBoard.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="DoctorManament.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ExportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="QuenMatKhau.cs">
       <SubType>Form</SubType>
     </Compile>

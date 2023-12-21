@@ -124,3 +124,5 @@ D:\TaiLieuDaiHoc\Nam4-Ki1\XDHTTTQL\QuanLyLichDangKiKhamBenh\QuanLyLichDangKiKham
 D:\TaiLieuDaiHoc\Nam4-Ki1\XDHTTTQL\QuanLyLichDangKiKhamBenh\QuanLyLichDangKiKhamBenh\bin\Debug\net6.0-windows\zh-Hant\Microsoft.Data.SqlClient.resources.dll
 D:\TaiLieuDaiHoc\Nam4-Ki1\XDHTTTQL\QuanLyLichDangKiKhamBenh\QuanLyLichDangKiKhamBenh\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll
 D:\TaiLieuDaiHoc\Nam4-Ki1\XDHTTTQL\QuanLyLichDangKiKhamBenh\QuanLyLichDangKiKhamBenh\bin\Debug\net6.0-windows\itextsharp.dll
+D:\TaiLieuDaiHoc\Nam4-Ki1\XDHTTTQL\QuanLyLichDangKiKhamBenh\QuanLyLichDangKiKhamBenh\obj\Debug\net6.0-windows\QuanLyLichDangKiKhamBenh.DoctorManament.resources
+D:\TaiLieuDaiHoc\Nam4-Ki1\XDHTTTQL\QuanLyLichDangKiKhamBenh\QuanLyLichDangKiKhamBenh\obj\Debug\net6.0-windows\QuanLyLichDangKiKhamBenh.ExportForm.resources

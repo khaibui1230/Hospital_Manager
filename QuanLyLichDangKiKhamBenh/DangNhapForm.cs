@@ -51,8 +51,8 @@
                     // vao trang chu khi dang nhap thanh cong
                     try
                     {
-                        Home home = new Home();
-                        home.Show();
+                       DashBoard dashBoard =    new DashBoard();
+                        dashBoard.Show();
 
                         this.Hide();
                     }catch(Exception ex)

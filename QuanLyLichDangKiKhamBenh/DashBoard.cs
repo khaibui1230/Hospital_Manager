@@ -16,5 +16,42 @@ namespace QuanLyLichDangKiKhamBenh
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Home home = new Home();
+
+            home.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DoctorManament doctorManament = new DoctorManament();
+            doctorManament.Show();
+            this.Hide();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            DangNhapForm dangNhapForm = new DangNhapForm(); 
+            dangNhapForm.Show();
+            this.Hide();
+        }
     }
 }

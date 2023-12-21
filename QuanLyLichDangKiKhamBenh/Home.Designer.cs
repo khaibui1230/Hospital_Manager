@@ -66,6 +66,7 @@
         private Button Button_Sua;
         private Label label17;
         private Button button3;
-        private Button button2;
+        private PrintDialog printDialog_All;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }
