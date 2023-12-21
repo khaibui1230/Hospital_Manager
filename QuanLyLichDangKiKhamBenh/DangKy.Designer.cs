@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DangKyForm));
             this.Button_DangKi = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox_XacThuc = new System.Windows.Forms.TextBox();
@@ -39,7 +40,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.textBox_Email = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,7 +47,7 @@
             // 
             this.Button_DangKi.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Button_DangKi.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Button_DangKi.Location = new System.Drawing.Point(429, 464);
+            this.Button_DangKi.Location = new System.Drawing.Point(421, 442);
             this.Button_DangKi.Name = "Button_DangKi";
             this.Button_DangKi.Size = new System.Drawing.Size(130, 37);
             this.Button_DangKi.TabIndex = 26;
@@ -117,10 +117,11 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::QuanLyLichDangKiKhamBenh.Properties.Resources.user_2935373_1280;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(177, 33);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(255, 119);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
             // 
@@ -148,7 +149,7 @@
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(38, 442);
+            this.button1.Location = new System.Drawing.Point(47, 442);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(89, 37);
             this.button1.TabIndex = 29;
@@ -156,23 +157,11 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label5.Location = new System.Drawing.Point(12, 400);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(187, 25);
-            this.label5.TabIndex = 30;
-            this.label5.Text = "Đăng kí với tư cách Bs";
-            // 
             // DangKyForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(604, 588);
-            this.Controls.Add(this.label5);
+            this.ClientSize = new System.Drawing.Size(582, 588);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox_Email);
@@ -205,6 +194,5 @@
         private Label label4;
         private TextBox textBox_Email;
         private Button button1;
-        private Label label5;
     }
 }

@@ -19,6 +19,9 @@
     <Compile Update="ExportForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="PrescriptionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="QuenMatKhau.cs">
       <SubType>Form</SubType>
     </Compile>

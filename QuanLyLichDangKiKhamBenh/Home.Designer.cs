@@ -29,8 +29,6 @@
         private Label label7;
         private Label label6;
         private Label label5;
-        private TextBox textBox_Age;
-        private Label label4;
         private TextBox textBox_Number;
         private Label label3;
         private TextBox textBox_Address;
@@ -42,13 +40,12 @@
         private ComboBox comboBox_NhomMau;
         private Label label10;
         private Panel panel_ChandoanBenh;
-        private Button button_keDonThuoc;
         private TextBox textBox_Chandoan;
         private Label label14;
         private TextBox textBox_TrieuChung;
         private Label label13;
         private DataGridView dataGridView_PatientMore;
-        private TextBox textBox_Id2;
+        private TextBox textBox_Id_KeDonThuoc;
         private Label label12;
         private Label label11;
         private ComboBox comboBox_KhoaKhambenh;
@@ -68,5 +65,7 @@
         private Button button3;
         private PrintDialog printDialog_All;
         private System.Drawing.Printing.PrintDocument printDocument1;
+        private TextBox textBox_KeDonThuoc;
+        private Label label4;
     }
 }

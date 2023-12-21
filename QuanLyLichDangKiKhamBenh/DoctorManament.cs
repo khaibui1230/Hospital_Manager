@@ -224,26 +224,26 @@ namespace QuanLyLichDangKiKhamBenh
                         DocPass = docPass
                     };
 
-                    // Kiểm tra xem bác sĩ đã tồn tại chưa bằng cách truy vấn cơ sở dữ liệu
-                    string queryCheckDocName = "SELECT COUNT(*) FROM Doctor WHERE DocName = @DocName";
-                    using (SqlConnection sqlConnection = Connection.GetSqlConnection())
-                    {
-                        sqlConnection.Open();
+                    //// Kiểm tra xem bác sĩ đã tồn tại chưa bằng cách truy vấn cơ sở dữ liệu
+                    //string queryCheckDocName = "SELECT COUNT(*) FROM Doctor WHERE DocName = @DocName";
+                    //using (SqlConnection sqlConnection = Connection.GetSqlConnection())
+                    //{
+                    //    sqlConnection.Open();
 
-                        using (SqlCommand sqlCommandCheckDocName = new SqlCommand(queryCheckDocName, sqlConnection))
-                        {
-                            sqlCommandCheckDocName.Parameters.AddWithValue("@DocName", docName);
+                    //    using (SqlCommand sqlCommandCheckDocName = new SqlCommand(queryCheckDocName, sqlConnection))
+                    //    {
+                    //        sqlCommandCheckDocName.Parameters.AddWithValue("@DocName", docName);
 
-                            int existingCount = (int)sqlCommandCheckDocName.ExecuteScalar();
+                    //        int existingCount = (int)sqlCommandCheckDocName.ExecuteScalar();
 
-                            if (existingCount > 0)
-                            {
-                                // Bác sĩ đã tồn tại
-                                MessageBox.Show("Bác sĩ này đã đăng ký");
-                                return;
-                            }
-                        }
-                    }
+                    //        if (existingCount > 0)
+                    //        {
+                    //            // Bác sĩ đã tồn tại
+                    //            MessageBox.Show("Bác sĩ này đã đăng ký");
+                    //            return;
+                    //        }
+                    //    }
+                    //}
                     // them bac si
 
                     modiffy.UpdateDoctor(newDoctor);
@@ -271,17 +271,25 @@ namespace QuanLyLichDangKiKhamBenh
 
             if (!int.TryParse(DocIDText, out docID) || docID <= 0)
             {
-                MessageBox.Show("Vui lòng nhập số Căn cước của bệnh nhân hợp lệ");
+                MessageBox.Show("Vui lòng nhập Id bác sĩ  hợp lệ");
             }
             else
             {
                 try
                 {
-                    // Call the function to delete the patient
-                    modiffy.DeletePatient(docID);
+                    DialogResult result = MessageBox.Show("Bạn có chắc sẽ xóa bác sĩ " + docID + " không?", "Xác nhận xóa bác sĩ", MessageBoxButtons.YesNo);
 
-                    MessageBox.Show("Xóa bác sĩ " + docID + " thành công !!");
-                    RefreshDataGridView();
+                    if (result == DialogResult.Yes)
+                    {
+                        // Call the function to delete the doctor
+                        modiffy.DeleteDoctor(docID);
+
+                        MessageBox.Show("Xóa bác sĩ " + docID + " thành công !!");
+
+                        // Refresh your DataGridView after deletion
+                        RefreshDataGridView();
+                    }
+                    
                 }
                 catch (Exception ex)
                 {

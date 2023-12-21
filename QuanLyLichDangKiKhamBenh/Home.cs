@@ -43,6 +43,25 @@ namespace QuanLyLichDangKiKhamBenh
             this.button_DSachBenhNhan = new System.Windows.Forms.Button();
             this.button_Thoat = new System.Windows.Forms.Button();
             this.panel_thembenhnhan = new System.Windows.Forms.Panel();
+            this.panel_ChandoanBenh = new System.Windows.Forms.Panel();
+            this.panel_DS = new System.Windows.Forms.Panel();
+            this.label17 = new System.Windows.Forms.Label();
+            this.dataGridView_Full = new System.Windows.Forms.DataGridView();
+            this.textBox_KeDonThuoc = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button_Luu = new System.Windows.Forms.Button();
+            this.comboBox_KhoaKhambenh = new System.Windows.Forms.ComboBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.comboBox_CanGiamSAt = new System.Windows.Forms.ComboBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.textBox_Chandoan = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.textBox_TrieuChung = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.dataGridView_PatientMore = new System.Windows.Forms.DataGridView();
+            this.textBox_Id_KeDonThuoc = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.button_xoa = new System.Windows.Forms.Button();
             this.Button_Sua = new System.Windows.Forms.Button();
             this.dataGridViewAdd = new System.Windows.Forms.DataGridView();
@@ -58,43 +77,22 @@ namespace QuanLyLichDangKiKhamBenh
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox_Age = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.textBox_Number = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox_Address = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox_Name = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel_DS = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label17 = new System.Windows.Forms.Label();
-            this.dataGridView_Full = new System.Windows.Forms.DataGridView();
-            this.panel_ChandoanBenh = new System.Windows.Forms.Panel();
-            this.button_Luu = new System.Windows.Forms.Button();
-            this.comboBox_KhoaKhambenh = new System.Windows.Forms.ComboBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.comboBox_CanGiamSAt = new System.Windows.Forms.ComboBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.button_keDonThuoc = new System.Windows.Forms.Button();
-            this.textBox_Chandoan = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.textBox_TrieuChung = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.dataGridView_PatientMore = new System.Windows.Forms.DataGridView();
-            this.textBox_Id2 = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.taiKhoanBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.printDialog_All = new System.Windows.Forms.PrintDialog();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.panel_thembenhnhan.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAdd)).BeginInit();
+            this.panel_ChandoanBenh.SuspendLayout();
             this.panel_DS.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Full)).BeginInit();
-            this.panel_ChandoanBenh.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_PatientMore)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAdd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.taiKhoanBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -173,19 +171,231 @@ namespace QuanLyLichDangKiKhamBenh
             this.panel_thembenhnhan.Controls.Add(this.label7);
             this.panel_thembenhnhan.Controls.Add(this.label6);
             this.panel_thembenhnhan.Controls.Add(this.label5);
-            this.panel_thembenhnhan.Controls.Add(this.textBox_Age);
-            this.panel_thembenhnhan.Controls.Add(this.label4);
             this.panel_thembenhnhan.Controls.Add(this.textBox_Number);
             this.panel_thembenhnhan.Controls.Add(this.label3);
             this.panel_thembenhnhan.Controls.Add(this.textBox_Address);
             this.panel_thembenhnhan.Controls.Add(this.label2);
             this.panel_thembenhnhan.Controls.Add(this.textBox_Name);
             this.panel_thembenhnhan.Controls.Add(this.label1);
-            this.panel_thembenhnhan.Location = new System.Drawing.Point(252, 12);
+            this.panel_thembenhnhan.Location = new System.Drawing.Point(255, 12);
             this.panel_thembenhnhan.Name = "panel_thembenhnhan";
             this.panel_thembenhnhan.Size = new System.Drawing.Size(1170, 630);
             this.panel_thembenhnhan.TabIndex = 6;
             this.panel_thembenhnhan.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // panel_ChandoanBenh
+            // 
+            this.panel_ChandoanBenh.Controls.Add(this.textBox_KeDonThuoc);
+            this.panel_ChandoanBenh.Controls.Add(this.label4);
+            this.panel_ChandoanBenh.Controls.Add(this.button_Luu);
+            this.panel_ChandoanBenh.Controls.Add(this.comboBox_KhoaKhambenh);
+            this.panel_ChandoanBenh.Controls.Add(this.label16);
+            this.panel_ChandoanBenh.Controls.Add(this.comboBox_CanGiamSAt);
+            this.panel_ChandoanBenh.Controls.Add(this.label15);
+            this.panel_ChandoanBenh.Controls.Add(this.textBox_Chandoan);
+            this.panel_ChandoanBenh.Controls.Add(this.label14);
+            this.panel_ChandoanBenh.Controls.Add(this.textBox_TrieuChung);
+            this.panel_ChandoanBenh.Controls.Add(this.label13);
+            this.panel_ChandoanBenh.Controls.Add(this.dataGridView_PatientMore);
+            this.panel_ChandoanBenh.Controls.Add(this.textBox_Id_KeDonThuoc);
+            this.panel_ChandoanBenh.Controls.Add(this.label12);
+            this.panel_ChandoanBenh.Controls.Add(this.label11);
+            this.panel_ChandoanBenh.Location = new System.Drawing.Point(255, 12);
+            this.panel_ChandoanBenh.Name = "panel_ChandoanBenh";
+            this.panel_ChandoanBenh.Size = new System.Drawing.Size(1167, 638);
+            this.panel_ChandoanBenh.TabIndex = 22;
+            this.panel_ChandoanBenh.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // panel_DS
+            // 
+            this.panel_DS.Controls.Add(this.label17);
+            this.panel_DS.Controls.Add(this.dataGridView_Full);
+            this.panel_DS.Location = new System.Drawing.Point(246, 12);
+            this.panel_DS.Name = "panel_DS";
+            this.panel_DS.Size = new System.Drawing.Size(1190, 635);
+            this.panel_DS.TabIndex = 23;
+            this.panel_DS.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint_1);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Perpetua Titling MT", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label17.Location = new System.Drawing.Point(422, 14);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(328, 28);
+            this.label17.TabIndex = 1;
+            this.label17.Text = "Danh Sách bệnh Nhân";
+            // 
+            // dataGridView_Full
+            // 
+            this.dataGridView_Full.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_Full.Location = new System.Drawing.Point(13, 57);
+            this.dataGridView_Full.Name = "dataGridView_Full";
+            this.dataGridView_Full.RowHeadersWidth = 51;
+            this.dataGridView_Full.RowTemplate.Height = 29;
+            this.dataGridView_Full.Size = new System.Drawing.Size(1177, 456);
+            this.dataGridView_Full.TabIndex = 0;
+            this.dataGridView_Full.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Full_CellContentClick);
+            this.dataGridView_Full.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Full_CellContentClick);
+            // 
+            // textBox_KeDonThuoc
+            // 
+            this.textBox_KeDonThuoc.Location = new System.Drawing.Point(182, 538);
+            this.textBox_KeDonThuoc.Name = "textBox_KeDonThuoc";
+            this.textBox_KeDonThuoc.Size = new System.Drawing.Size(248, 27);
+            this.textBox_KeDonThuoc.TabIndex = 15;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(43, 537);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(128, 25);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Kê Đơn thuốc";
+            // 
+            // button_Luu
+            // 
+            this.button_Luu.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button_Luu.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button_Luu.Location = new System.Drawing.Point(856, 552);
+            this.button_Luu.Name = "button_Luu";
+            this.button_Luu.Size = new System.Drawing.Size(111, 42);
+            this.button_Luu.TabIndex = 13;
+            this.button_Luu.Text = "Lưu";
+            this.button_Luu.UseVisualStyleBackColor = false;
+            this.button_Luu.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // comboBox_KhoaKhambenh
+            // 
+            this.comboBox_KhoaKhambenh.FormattingEnabled = true;
+            this.comboBox_KhoaKhambenh.Items.AddRange(new object[] {
+            "Khoa Nội Tiêu Hóa ",
+            "Khoa Tim Mạch ",
+            "Khoa Nhi ",
+            "Khoa Phụ Nữ và Sinh Học ",
+            "Khoa Ngoại Tiêu Hóa ",
+            "Khoa Tai Mũi Họng ",
+            "Khoa Chấn Thương ",
+            "Khoa Y Học Nội Ngoại ",
+            "Khoa Ung Bướu ",
+            "Khoa Nguồn Cung Y Tế ",
+            "Khoa Hồi Sức Cấp Cứu ",
+            "Khoa Ngoại Tâm Thần Học ",
+            "Khoa Nhiễm ",
+            "Khoa Răng Hàm Mặt ",
+            "Khoa Mắt"});
+            this.comboBox_KhoaKhambenh.Location = new System.Drawing.Point(841, 476);
+            this.comboBox_KhoaKhambenh.Name = "comboBox_KhoaKhambenh";
+            this.comboBox_KhoaKhambenh.Size = new System.Drawing.Size(260, 28);
+            this.comboBox_KhoaKhambenh.TabIndex = 12;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label16.Location = new System.Drawing.Point(661, 479);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(161, 25);
+            this.label16.TabIndex = 11;
+            this.label16.Text = " Khoa khám bệnh";
+            this.label16.Click += new System.EventHandler(this.label16_Click);
+            // 
+            // comboBox_CanGiamSAt
+            // 
+            this.comboBox_CanGiamSAt.FormattingEnabled = true;
+            this.comboBox_CanGiamSAt.Items.AddRange(new object[] {
+            "Có",
+            "Không"});
+            this.comboBox_CanGiamSAt.Location = new System.Drawing.Point(709, 406);
+            this.comboBox_CanGiamSAt.Name = "comboBox_CanGiamSAt";
+            this.comboBox_CanGiamSAt.Size = new System.Drawing.Size(93, 28);
+            this.comboBox_CanGiamSAt.TabIndex = 10;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label15.Location = new System.Drawing.Point(544, 405);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(121, 25);
+            this.label15.TabIndex = 9;
+            this.label15.Text = "Cần giám sát";
+            // 
+            // textBox_Chandoan
+            // 
+            this.textBox_Chandoan.Location = new System.Drawing.Point(170, 471);
+            this.textBox_Chandoan.Name = "textBox_Chandoan";
+            this.textBox_Chandoan.Size = new System.Drawing.Size(248, 27);
+            this.textBox_Chandoan.TabIndex = 7;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label14.Location = new System.Drawing.Point(43, 467);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(103, 25);
+            this.label14.TabIndex = 6;
+            this.label14.Text = "Chẩn đoán";
+            // 
+            // textBox_TrieuChung
+            // 
+            this.textBox_TrieuChung.Location = new System.Drawing.Point(170, 410);
+            this.textBox_TrieuChung.Name = "textBox_TrieuChung";
+            this.textBox_TrieuChung.Size = new System.Drawing.Size(192, 27);
+            this.textBox_TrieuChung.TabIndex = 5;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label13.Location = new System.Drawing.Point(43, 409);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(114, 25);
+            this.label13.TabIndex = 4;
+            this.label13.Text = "Triệu chứng";
+            // 
+            // dataGridView_PatientMore
+            // 
+            this.dataGridView_PatientMore.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_PatientMore.Location = new System.Drawing.Point(3, 180);
+            this.dataGridView_PatientMore.Name = "dataGridView_PatientMore";
+            this.dataGridView_PatientMore.RowHeadersWidth = 51;
+            this.dataGridView_PatientMore.RowTemplate.Height = 29;
+            this.dataGridView_PatientMore.Size = new System.Drawing.Size(1150, 188);
+            this.dataGridView_PatientMore.TabIndex = 3;
+            this.dataGridView_PatientMore.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_PatientMore_CellContentClick);
+            this.dataGridView_PatientMore.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_PatientMore_CellContentClick);
+            // 
+            // textBox_Id_KeDonThuoc
+            // 
+            this.textBox_Id_KeDonThuoc.Location = new System.Drawing.Point(182, 105);
+            this.textBox_Id_KeDonThuoc.Name = "textBox_Id_KeDonThuoc";
+            this.textBox_Id_KeDonThuoc.Size = new System.Drawing.Size(192, 27);
+            this.textBox_Id_KeDonThuoc.TabIndex = 2;
+            this.textBox_Id_KeDonThuoc.TextChanged += new System.EventHandler(this.textBox_Id_TextChanged);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label12.Location = new System.Drawing.Point(43, 101);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(118, 25);
+            this.label12.TabIndex = 1;
+            this.label12.Text = "Số Căn Cước";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label11.Location = new System.Drawing.Point(387, 34);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(192, 31);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Chẩn Đoán Bệnh";
             // 
             // button_xoa
             // 
@@ -257,7 +467,7 @@ namespace QuanLyLichDangKiKhamBenh
             "AB Rh-",
             "O Rh+",
             "O Rh-"});
-            this.comboBox_NhomMau.Location = new System.Drawing.Point(677, 195);
+            this.comboBox_NhomMau.Location = new System.Drawing.Point(648, 132);
             this.comboBox_NhomMau.Name = "comboBox_NhomMau";
             this.comboBox_NhomMau.Size = new System.Drawing.Size(91, 28);
             this.comboBox_NhomMau.TabIndex = 19;
@@ -270,7 +480,7 @@ namespace QuanLyLichDangKiKhamBenh
             "Nam",
             "Nữ",
             "Khác"});
-            this.comboBox1.Location = new System.Drawing.Point(961, 193);
+            this.comboBox1.Location = new System.Drawing.Point(959, 135);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(88, 28);
             this.comboBox1.TabIndex = 18;
@@ -336,7 +546,7 @@ namespace QuanLyLichDangKiKhamBenh
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(547, 192);
+            this.label6.Location = new System.Drawing.Point(501, 131);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(106, 25);
             this.label6.TabIndex = 10;
@@ -347,32 +557,15 @@ namespace QuanLyLichDangKiKhamBenh
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(845, 192);
+            this.label5.Location = new System.Drawing.Point(845, 135);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(89, 25);
             this.label5.TabIndex = 8;
             this.label5.Text = "Giới Tính";
             // 
-            // textBox_Age
-            // 
-            this.textBox_Age.Location = new System.Drawing.Point(490, 75);
-            this.textBox_Age.Name = "textBox_Age";
-            this.textBox_Age.Size = new System.Drawing.Size(133, 27);
-            this.textBox_Age.TabIndex = 7;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(425, 74);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 25);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Tuổi";
-            // 
             // textBox_Number
             // 
-            this.textBox_Number.Location = new System.Drawing.Point(600, 138);
+            this.textBox_Number.Location = new System.Drawing.Point(602, 78);
             this.textBox_Number.Name = "textBox_Number";
             this.textBox_Number.Size = new System.Drawing.Size(203, 27);
             this.textBox_Number.TabIndex = 5;
@@ -381,7 +574,7 @@ namespace QuanLyLichDangKiKhamBenh
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(440, 138);
+            this.label3.Location = new System.Drawing.Point(454, 77);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(124, 25);
             this.label3.TabIndex = 4;
@@ -421,224 +614,6 @@ namespace QuanLyLichDangKiKhamBenh
             this.label1.TabIndex = 0;
             this.label1.Text = "Họ Và Tên";
             // 
-            // panel_DS
-            // 
-            this.panel_DS.Controls.Add(this.button3);
-            this.panel_DS.Controls.Add(this.label17);
-            this.panel_DS.Controls.Add(this.dataGridView_Full);
-            this.panel_DS.Location = new System.Drawing.Point(252, 15);
-            this.panel_DS.Name = "panel_DS";
-            this.panel_DS.Size = new System.Drawing.Size(1190, 635);
-            this.panel_DS.TabIndex = 23;
-            this.panel_DS.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint_1);
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button3.Location = new System.Drawing.Point(985, 537);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(145, 44);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Xóa Thông tin";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Perpetua Titling MT", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label17.Location = new System.Drawing.Point(422, 14);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(328, 28);
-            this.label17.TabIndex = 1;
-            this.label17.Text = "Danh Sách bệnh Nhân";
-            // 
-            // dataGridView_Full
-            // 
-            this.dataGridView_Full.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_Full.Location = new System.Drawing.Point(13, 57);
-            this.dataGridView_Full.Name = "dataGridView_Full";
-            this.dataGridView_Full.RowHeadersWidth = 51;
-            this.dataGridView_Full.RowTemplate.Height = 29;
-            this.dataGridView_Full.Size = new System.Drawing.Size(1159, 456);
-            this.dataGridView_Full.TabIndex = 0;
-            this.dataGridView_Full.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Full_CellContentClick);
-            this.dataGridView_Full.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Full_CellContentClick_2);
-            // 
-            // panel_ChandoanBenh
-            // 
-            this.panel_ChandoanBenh.Controls.Add(this.button_Luu);
-            this.panel_ChandoanBenh.Controls.Add(this.comboBox_KhoaKhambenh);
-            this.panel_ChandoanBenh.Controls.Add(this.label16);
-            this.panel_ChandoanBenh.Controls.Add(this.comboBox_CanGiamSAt);
-            this.panel_ChandoanBenh.Controls.Add(this.label15);
-            this.panel_ChandoanBenh.Controls.Add(this.button_keDonThuoc);
-            this.panel_ChandoanBenh.Controls.Add(this.textBox_Chandoan);
-            this.panel_ChandoanBenh.Controls.Add(this.label14);
-            this.panel_ChandoanBenh.Controls.Add(this.textBox_TrieuChung);
-            this.panel_ChandoanBenh.Controls.Add(this.label13);
-            this.panel_ChandoanBenh.Controls.Add(this.dataGridView_PatientMore);
-            this.panel_ChandoanBenh.Controls.Add(this.textBox_Id2);
-            this.panel_ChandoanBenh.Controls.Add(this.label12);
-            this.panel_ChandoanBenh.Controls.Add(this.label11);
-            this.panel_ChandoanBenh.Location = new System.Drawing.Point(255, 12);
-            this.panel_ChandoanBenh.Name = "panel_ChandoanBenh";
-            this.panel_ChandoanBenh.Size = new System.Drawing.Size(1167, 638);
-            this.panel_ChandoanBenh.TabIndex = 22;
-            this.panel_ChandoanBenh.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // button_Luu
-            // 
-            this.button_Luu.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button_Luu.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button_Luu.Location = new System.Drawing.Point(856, 552);
-            this.button_Luu.Name = "button_Luu";
-            this.button_Luu.Size = new System.Drawing.Size(111, 42);
-            this.button_Luu.TabIndex = 13;
-            this.button_Luu.Text = "Lưu";
-            this.button_Luu.UseVisualStyleBackColor = false;
-            this.button_Luu.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // comboBox_KhoaKhambenh
-            // 
-            this.comboBox_KhoaKhambenh.FormattingEnabled = true;
-            this.comboBox_KhoaKhambenh.Items.AddRange(new object[] {
-            "Khoa Nội Tiêu Hóa ",
-            "Khoa Tim Mạch ",
-            "Khoa Nhi ",
-            "Khoa Phụ Nữ và Sinh Học ",
-            "Khoa Ngoại Tiêu Hóa ",
-            "Khoa Tai Mũi Họng ",
-            "Khoa Chấn Thương ",
-            "Khoa Y Học Nội Ngoại ",
-            "Khoa Ung Bướu ",
-            "Khoa Nguồn Cung Y Tế ",
-            "Khoa Hồi Sức Cấp Cứu ",
-            "Khoa Ngoại Tâm Thần Học ",
-            "Khoa Nhiễm ",
-            "Khoa Răng Hàm Mặt ",
-            "Khoa Mắt"});
-            this.comboBox_KhoaKhambenh.Location = new System.Drawing.Point(841, 476);
-            this.comboBox_KhoaKhambenh.Name = "comboBox_KhoaKhambenh";
-            this.comboBox_KhoaKhambenh.Size = new System.Drawing.Size(260, 28);
-            this.comboBox_KhoaKhambenh.TabIndex = 12;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label16.Location = new System.Drawing.Point(661, 479);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(161, 25);
-            this.label16.TabIndex = 11;
-            this.label16.Text = " Khoa khám bệnh";
-            this.label16.Click += new System.EventHandler(this.label16_Click);
-            // 
-            // comboBox_CanGiamSAt
-            // 
-            this.comboBox_CanGiamSAt.FormattingEnabled = true;
-            this.comboBox_CanGiamSAt.Items.AddRange(new object[] {
-            "Có",
-            "Không"});
-            this.comboBox_CanGiamSAt.Location = new System.Drawing.Point(709, 406);
-            this.comboBox_CanGiamSAt.Name = "comboBox_CanGiamSAt";
-            this.comboBox_CanGiamSAt.Size = new System.Drawing.Size(93, 28);
-            this.comboBox_CanGiamSAt.TabIndex = 10;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label15.Location = new System.Drawing.Point(544, 405);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(121, 25);
-            this.label15.TabIndex = 9;
-            this.label15.Text = "Cần giám sát";
-            // 
-            // button_keDonThuoc
-            // 
-            this.button_keDonThuoc.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.button_keDonThuoc.Location = new System.Drawing.Point(103, 532);
-            this.button_keDonThuoc.Name = "button_keDonThuoc";
-            this.button_keDonThuoc.Size = new System.Drawing.Size(127, 29);
-            this.button_keDonThuoc.TabIndex = 8;
-            this.button_keDonThuoc.Text = "Kê đơn thuốc";
-            this.button_keDonThuoc.UseVisualStyleBackColor = false;
-            this.button_keDonThuoc.Click += new System.EventHandler(this.button_keDonThuoc_Click);
-            // 
-            // textBox_Chandoan
-            // 
-            this.textBox_Chandoan.Location = new System.Drawing.Point(170, 471);
-            this.textBox_Chandoan.Name = "textBox_Chandoan";
-            this.textBox_Chandoan.Size = new System.Drawing.Size(248, 27);
-            this.textBox_Chandoan.TabIndex = 7;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label14.Location = new System.Drawing.Point(43, 467);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(103, 25);
-            this.label14.TabIndex = 6;
-            this.label14.Text = "Chẩn đoán";
-            // 
-            // textBox_TrieuChung
-            // 
-            this.textBox_TrieuChung.Location = new System.Drawing.Point(170, 410);
-            this.textBox_TrieuChung.Name = "textBox_TrieuChung";
-            this.textBox_TrieuChung.Size = new System.Drawing.Size(192, 27);
-            this.textBox_TrieuChung.TabIndex = 5;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label13.Location = new System.Drawing.Point(43, 409);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(114, 25);
-            this.label13.TabIndex = 4;
-            this.label13.Text = "Triệu chứng";
-            // 
-            // dataGridView_PatientMore
-            // 
-            this.dataGridView_PatientMore.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_PatientMore.Location = new System.Drawing.Point(21, 180);
-            this.dataGridView_PatientMore.Name = "dataGridView_PatientMore";
-            this.dataGridView_PatientMore.RowHeadersWidth = 51;
-            this.dataGridView_PatientMore.RowTemplate.Height = 29;
-            this.dataGridView_PatientMore.Size = new System.Drawing.Size(1143, 188);
-            this.dataGridView_PatientMore.TabIndex = 3;
-            this.dataGridView_PatientMore.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_PatientMore_CellContentClick);
-            // 
-            // textBox_Id2
-            // 
-            this.textBox_Id2.Location = new System.Drawing.Point(182, 105);
-            this.textBox_Id2.Name = "textBox_Id2";
-            this.textBox_Id2.Size = new System.Drawing.Size(192, 27);
-            this.textBox_Id2.TabIndex = 2;
-            this.textBox_Id2.TextChanged += new System.EventHandler(this.textBox_Id_TextChanged);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label12.Location = new System.Drawing.Point(43, 101);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(118, 25);
-            this.label12.TabIndex = 1;
-            this.label12.Text = "Số Căn Cước";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label11.Location = new System.Drawing.Point(387, 34);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(192, 31);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "Chẩn Đoán Bệnh";
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ScrollBar;
@@ -668,9 +643,9 @@ namespace QuanLyLichDangKiKhamBenh
             // 
             this.ClientSize = new System.Drawing.Size(1499, 798);
             this.Controls.Add(this.panel_DS);
-            this.Controls.Add(this.panel_thembenhnhan);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.panel_ChandoanBenh);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.panel_thembenhnhan);
             this.Controls.Add(this.button_Thoat);
             this.Controls.Add(this.button_DSachBenhNhan);
             this.Controls.Add(this.Button_ChanDoanBenh);
@@ -680,13 +655,13 @@ namespace QuanLyLichDangKiKhamBenh
             this.Text = "Patients Manament";
             this.panel_thembenhnhan.ResumeLayout(false);
             this.panel_thembenhnhan.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAdd)).EndInit();
+            this.panel_ChandoanBenh.ResumeLayout(false);
+            this.panel_ChandoanBenh.PerformLayout();
             this.panel_DS.ResumeLayout(false);
             this.panel_DS.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Full)).EndInit();
-            this.panel_ChandoanBenh.ResumeLayout(false);
-            this.panel_ChandoanBenh.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_PatientMore)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAdd)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.taiKhoanBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -813,9 +788,9 @@ namespace QuanLyLichDangKiKhamBenh
         {
             try
             {
-                if (textBox_Id2.Text != "")
+                if (textBox_Id_KeDonThuoc.Text != "")
                 {
-                    int pid = Convert.ToInt32(textBox_Id2.Text);
+                    int pid = Convert.ToInt32(textBox_Id_KeDonThuoc.Text);
 
                     using (SqlConnection sql = Connection.GetSqlConnection())
                     {
@@ -841,9 +816,10 @@ namespace QuanLyLichDangKiKhamBenh
         {
             try
             {
-                int pid = Convert.ToInt32(textBox_Id2.Text);
+                int pid = Convert.ToInt32(textBox_Id_KeDonThuoc.Text);
                 String sympt = textBox_TrieuChung.Text;
                 String diag = textBox_Chandoan.Text;
+                String medi = textBox_KeDonThuoc.Text;
                 String ward = comboBox_CanGiamSAt.Text;
                 String wardType = comboBox_KhoaKhambenh.Text;
 
@@ -853,12 +829,13 @@ namespace QuanLyLichDangKiKhamBenh
                     sql.Open();
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = sql;
-                    cmd.CommandText = "INSERT INTO PatientsMore (PatientID, Symotoms, Diagnosis, Ward, Ward_Type) VALUES (@pid, @sympt, @diag, @ward, @wardType)";
+                    cmd.CommandText = "INSERT INTO PatientsMore (PatientID, Symotoms, Diagnosis, Medicines, Ward, Ward_Type) VALUES (@pid, @sympt, @diag,@medi, @ward, @wardType)";
 
                     // Add parameters to the SqlCommand
                     cmd.Parameters.AddWithValue("@pid", pid);
                     cmd.Parameters.AddWithValue("@sympt", sympt);
                     cmd.Parameters.AddWithValue("@diag", diag);
+                    cmd.Parameters.AddWithValue("@medi", medi);
                     cmd.Parameters.AddWithValue("@ward", ward);
                     cmd.Parameters.AddWithValue("@wardType", wardType);
 
@@ -876,9 +853,10 @@ namespace QuanLyLichDangKiKhamBenh
             }
 
             // xoa thong tin da nhap
-            textBox_Id2.Clear();
+            textBox_Id_KeDonThuoc.Clear();
             textBox_TrieuChung.Clear();
             textBox_Chandoan.Clear();
+            textBox_KeDonThuoc.Clear();
             comboBox_CanGiamSAt.ResetText();
             comboBox_KhoaKhambenh.ResetText();
         }
@@ -895,8 +873,7 @@ namespace QuanLyLichDangKiKhamBenh
             String address = textBox_Address.Text;
             String contactText = textBox_Number.Text;
             int contact;
-            String ageText = textBox_Age.Text;
-            int Age;
+            
             String blood = comboBox_NhomMau.Text;
             String cccdText = textBox_CCCD.Text;
             int cCCD;
@@ -917,10 +894,7 @@ namespace QuanLyLichDangKiKhamBenh
             {
                 MessageBox.Show("Vui lòng nhập số điện thoại bệnh nhân hợp lệ");
             }
-            else if (!int.TryParse(ageText, out Age) || Age <= 0)
-            {
-                MessageBox.Show("Vui lòng nhập số tuổi bệnh nhân hợp lệ");
-            }
+           
             else if (!int.TryParse(cccdText, out cCCD) || cCCD <= 0)
             {
                 MessageBox.Show("Vui lòng nhập số Căn cước của bệnh nhân hợp lệ");
@@ -1031,11 +1005,11 @@ namespace QuanLyLichDangKiKhamBenh
             textBox_Name.Clear();
             textBox_Address.Clear();
             textBox_Number.Clear();
-            textBox_Age.Clear();
+            textBox_Year.Clear();
             comboBox_NhomMau.Items.Clear();
             textBox_CCCD.Clear();
             textBox_TienSuBenh.Clear();
-            textBox_Year.Clear();
+            
             comboBox1.Items.Clear();
             comboBox_NhomMau.Items.Clear();
 
@@ -1044,34 +1018,10 @@ namespace QuanLyLichDangKiKhamBenh
 
         private void button_keDonThuoc_Click(object sender, EventArgs e)
         {
-            try
-            {// Tạo một package Excel
-                using (var excelPackage = new ExcelPackage())
-                {
-                    // Thêm một worksheet vào package
-                    var worksheet = excelPackage.Workbook.Worksheets.Add("DonThuoc");
+            PrescriptionsForm prescriptionsForm = new PrescriptionsForm();
+            prescriptionsForm.Show();
 
-                    // Thêm dữ liệu vào worksheet
-                    worksheet.Cells["A1"].Value = "Tên Thuốc";
-                    worksheet.Cells["B1"].Value = "Liều Lượng";
-                    worksheet.Cells["C1"].Value = "Cách Dùng";
-
-                    // Lưu tệp Excel vào một đường dẫn cụ thể 
-
-                    var filePath = Path.Combine("D:\\TaiLieuDaiHoc\\Nam4-Ki1\\XDHTTTQL\\QuanLyLichDangKiKhamBenh", "DonThuoc.xlsx");
-
-
-                    // Lưu workbook vào tệp Excel
-                    File.WriteAllBytes(filePath, excelPackage.GetAsByteArray());
-
-                    // Hiển thị thông báo thành công
-                    MessageBox.Show($"Đã tạo và lưu Excel thành công tại:\n{filePath}");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi: " + ex.Message);
-            }
+            this.Hide();
         }
 
         //xuat file 
@@ -1083,19 +1033,43 @@ namespace QuanLyLichDangKiKhamBenh
 
             if (exportForm.ExportExcelResult)
             {
-                Export_Excel();
+                MessageBox.Show("Chưa hỗ trợ chức năng này !");
+
+                //DataTable dataTable = ConvertDataGridViewToDataTable(dataGridView_Full);
+                //ExportFileExcel(dataTable, "Danh sách", "Danh sách");
+
             }
             else if (exportForm.ExportPdfResult)
             {
                 ExportPDf();
             }
-            else if (exportForm.ExportWordResult)
+
+
+
+
+
+
+        }
+        private DataTable ConvertDataGridViewToDataTable(DataGridView dataGridView)
+        {
+            DataTable dt = new DataTable();
+
+            foreach (DataGridViewColumn column in dataGridView.Columns)
             {
-                Export_Word();
+                dt.Columns.Add(column.HeaderText, column.ValueType);
             }
 
+            foreach (DataGridViewRow row in dataGridView.Rows)
+            {
+                DataRow dr = dt.NewRow();
+                foreach (DataGridViewCell cell in row.Cells)
+                {
+                    dr[cell.ColumnIndex] = cell.Value;
+                }
+                dt.Rows.Add(dr);
+            }
 
-
+            return dt;
         }
 
 
@@ -1226,75 +1200,170 @@ namespace QuanLyLichDangKiKhamBenh
         }
 
 
-        private void Export_Excel()
+        public void ExportFileExcel(DataTable dataTable, string sheetName, string title)
         {
-            if (dataGridView_Full.Rows.Count > 0)
+            //Tạo các đối tượng Excel
+
+            Microsoft.Office.Interop.Excel.Application oExcel = new Microsoft.Office.Interop.Excel.Application();
+
+            Microsoft.Office.Interop.Excel.Workbooks oBooks;
+
+            Microsoft.Office.Interop.Excel.Sheets oSheets;
+
+            Microsoft.Office.Interop.Excel.Workbook oBook;
+
+            Microsoft.Office.Interop.Excel.Worksheet oSheet;
+
+            //Tạo mới một Excel WorkBook 
+
+            oExcel.Visible = true;
+
+            oExcel.DisplayAlerts = false;
+
+            oExcel.Application.SheetsInNewWorkbook = 1;
+
+            oBooks = oExcel.Workbooks;
+
+            oBook = (Microsoft.Office.Interop.Excel.Workbook)(oExcel.Workbooks.Add(Type.Missing));
+
+            oSheets = oBook.Worksheets;
+
+            oSheet = (Microsoft.Office.Interop.Excel.Worksheet)oSheets.get_Item(1);
+
+            oSheet.Name = sheetName;
+
+            // Tạo phần Tiêu đề
+            Microsoft.Office.Interop.Excel.Range head = oSheet.get_Range("A1", "G1");
+
+            head.MergeCells = true;
+
+            head.Value2 = title;
+
+            head.Font.Bold = true;
+
+            head.Font.Name = "Times New Roman";
+
+            head.Font.Size = "20";
+
+            head.HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+
+            // Tạo tiêu đề cột 
+
+            Microsoft.Office.Interop.Excel.Range cl1 = oSheet.get_Range("A3", "A3");
+
+            cl1.Value2 = "Mã bệnh nhân";
+
+            cl1.ColumnWidth = 12;
+
+            Microsoft.Office.Interop.Excel.Range cl2 = oSheet.get_Range("B3", "B3");
+
+            cl2.Value2 = "Họ tên";
+
+            cl2.ColumnWidth = 25.0;
+
+            Microsoft.Office.Interop.Excel.Range cl3 = oSheet.get_Range("C3", "C3");
+
+            cl3.Value2 = "Giới Tính";
+            cl3.ColumnWidth = 12.0;
+
+            Microsoft.Office.Interop.Excel.Range cl4 = oSheet.get_Range("D3", "D3");
+
+            cl4.Value2 = "Ngày Sinh";
+
+            cl4.ColumnWidth = 10.5;
+
+            Microsoft.Office.Interop.Excel.Range cl5 = oSheet.get_Range("E3", "E3");
+
+            cl5.Value2 = "Số điện thoại";
+
+            cl5.ColumnWidth = 20.5;
+
+            Microsoft.Office.Interop.Excel.Range cl6 = oSheet.get_Range("F3", "F3");
+
+            cl6.Value2 = "Nhóm máu";
+
+            cl6.ColumnWidth = 18.5;
+
+            Microsoft.Office.Interop.Excel.Range cl7 = oSheet.get_Range("G3", "G3");
+
+            cl7.Value2 = "Tiền sử bệnh";
+
+            cl7.ColumnWidth = 13.5;
+
+            Microsoft.Office.Interop.Excel.Range cl8 = oSheet.get_Range("E3", "E3");
+
+            cl8.Value2 = "Địa chỉ";
+
+            cl8.ColumnWidth = 13.5;
+
+            Microsoft.Office.Interop.Excel.Range rowHead = oSheet.get_Range("A3", "G3");
+
+            rowHead.Font.Bold = true;
+
+            // Kẻ viền
+
+            rowHead.Borders.LineStyle = Microsoft.Office.Interop.Excel.Constants.xlSolid;
+
+            // Thiết lập màu nền
+
+            rowHead.Interior.ColorIndex = 6;
+
+            rowHead.HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+
+            // Tạo mảng theo datatable
+
+            object[,] arr = new object[dataTable.Rows.Count, dataTable.Columns.Count];
+
+            //Chuyển dữ liệu từ DataTable vào mảng đối tượng
+
+            for (int row = 0; row < dataTable.Rows.Count; row++)
             {
-                SaveFileDialog save = new SaveFileDialog();
-                save.Filter = "Excel (*.xlsx)|*.xlsx";
-                save.FileName = "Result.xlsx";
+                DataRow dataRow = dataTable.Rows[row];
 
-                bool errorMessage = false;
-
-                if (save.ShowDialog() == DialogResult.OK)
+                for (int col = 0; col < dataTable.Columns.Count; col++)
                 {
-                    if (File.Exists(save.FileName))
-                    {
-                        try
-                        {
-                            File.Delete(save.FileName);
-                        }
-                        catch (Exception ex)
-                        {
-                            errorMessage = true;
-                            MessageBox.Show("Unable to write data to disk: " + ex.Message);
-                        }
-                    }
-
-                    if (!errorMessage)
-                    {
-                        try
-                        {
-                            using (ExcelPackage excelPackage = new ExcelPackage())
-                            {
-                                ExcelWorksheet worksheet = excelPackage.Workbook.Worksheets.Add("Data");
-
-                                // Ghi header
-                                int colIndex = 1;
-                                foreach (DataGridViewColumn col in dataGridView_Full.Columns)
-                                {
-                                    worksheet.Cells[1, colIndex].Value = col.HeaderText;
-                                    colIndex++;
-                                }
-
-                                // Ghi dữ liệu
-                                int rowIndex = 2;
-                                foreach (DataGridViewRow viewRow in dataGridView_Full.Rows)
-                                {
-                                    int cellIndex = 1;
-                                    foreach (DataGridViewCell dcell in viewRow.Cells)
-                                    {
-                                        string cellValue = (dcell.Value != null) ? dcell.Value.ToString() : "";
-                                        worksheet.Cells[rowIndex, cellIndex].Value = cellValue;
-                                        cellIndex++;
-                                    }
-                                    rowIndex++;
-                                }
-
-                                FileInfo excelFile = new FileInfo(save.FileName);
-                                excelPackage.SaveAs(excelFile);
-                            }
-
-                            MessageBox.Show("Export thành công", "Thông báo");
-
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("Lỗi: " + ex.Message, "Thông báo");
-                        }
-                    }
+                    arr[row, col] = dataRow[col];
                 }
             }
+
+            //Thiết lập vùng điền dữ liệu
+
+            int rowStart = 4;
+
+            int columnStart = 1;
+
+            int rowEnd = rowStart + dataTable.Rows.Count - 2;
+
+            int columnEnd = dataTable.Columns.Count;
+
+            // Ô bắt đầu điền dữ liệu
+
+            Microsoft.Office.Interop.Excel.Range c1 = (Microsoft.Office.Interop.Excel.Range)oSheet.Cells[rowStart, columnStart];
+
+            // Ô kết thúc điền dữ liệu
+
+            Microsoft.Office.Interop.Excel.Range c2 = (Microsoft.Office.Interop.Excel.Range)oSheet.Cells[rowEnd, columnEnd];
+
+            // Lấy về vùng điền dữ liệu
+
+            Microsoft.Office.Interop.Excel.Range range = oSheet.get_Range(c1, c2);
+
+            //Điền dữ liệu vào vùng đã thiết lập
+
+            range.Value2 = arr;
+
+            // Kẻ viền
+
+            range.Borders.LineStyle = Microsoft.Office.Interop.Excel.Constants.xlSolid;
+
+            // Căn giữa cột mã nhân viên
+
+            //Microsoft.Office.Interop.Excel.Range c3 = (Microsoft.Office.Interop.Excel.Range)oSheet.Cells[rowEnd, columnStart];
+
+            //Microsoft.Office.Interop.Excel.Range c4 = oSheet.get_Range(c1, c3);
+
+            //Căn giữa cả bảng 
+            oSheet.get_Range(c1, c2).HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
         }
         private void Export_Word()
         {
@@ -1315,9 +1384,13 @@ namespace QuanLyLichDangKiKhamBenh
 
         }
 
+        // hien thi du lieu khi click vao ten trong danh sach
         private void dataGridView_PatientMore_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            if(dataGridView_PatientMore.SelectedRows.Count > 0)
+            {
+                textBox_Id_KeDonThuoc.Text = dataGridView_PatientMore.SelectedRows[0].Cells[0].Value.ToString(); 
+            }
         }
         // button sua for the add patient
         private void Button_Sua_Click(object sender, EventArgs e)
@@ -1326,8 +1399,7 @@ namespace QuanLyLichDangKiKhamBenh
             String address = textBox_Address.Text;
             String contactText = textBox_Number.Text;
             int contact;
-            String ageText = textBox_Age.Text;
-            int Age;
+            
             String blood = comboBox_NhomMau.Text;
             String cccdText = textBox_CCCD.Text;
             int cCCD;
@@ -1348,10 +1420,7 @@ namespace QuanLyLichDangKiKhamBenh
             {
                 MessageBox.Show("Vui lòng nhập số điện thoại bệnh nhân hợp lệ");
             }
-            else if (!int.TryParse(ageText, out Age) || Age <= 0)
-            {
-                MessageBox.Show("Vui lòng nhập số tuổi bệnh nhân hợp lệ");
-            }
+           
             else if (!int.TryParse(cccdText, out cCCD) || cCCD <= 0)
             {
                 MessageBox.Show("Vui lòng nhập số Căn cước của bệnh nhân hợp lệ");
@@ -1450,7 +1519,7 @@ namespace QuanLyLichDangKiKhamBenh
 
                 // Set the value of textBox_DayOfBirth using the content of the fourth column (Column 3)
                 // Assuming textBox_Age is meant for age, as you didn't have textBox_Age in the provided code
-                textBox_Age.Text = dataGridViewAdd.SelectedRows[0].Cells[3].Value.ToString(); // Column 3
+                textBox_Year.Text = dataGridViewAdd.SelectedRows[0].Cells[3].Value.ToString(); // Column 3
 
                 // Set the value of textBox_Contact using the content of the fifth column (Column 4)
                 textBox_Number.Text = dataGridViewAdd.SelectedRows[0].Cells[4].Value.ToString(); // Column 4
@@ -1475,7 +1544,7 @@ namespace QuanLyLichDangKiKhamBenh
 
         private void dataGridView_Full_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            
         }
 
         private void comboBox_KhoaKhambenh_SelectedIndexChanged(object sender, EventArgs e)
@@ -1613,11 +1682,6 @@ namespace QuanLyLichDangKiKhamBenh
 
         }
 
-        private void dataGridView_Full_CellContentClick_2(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         ////// sua thong tin
 
         //private void button2_Click_1(object sender, EventArgs e)
@@ -1653,6 +1717,16 @@ namespace QuanLyLichDangKiKhamBenh
         }
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+
+        }
+
+        private void label4_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
